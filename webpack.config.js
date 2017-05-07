@@ -22,10 +22,6 @@ module.exports = {
 			}
 		]
 	},
-	devServer: {
-	    contentBase: "./",
-	    hot: true
-	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoEmitOnErrorsPlugin()
