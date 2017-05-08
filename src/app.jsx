@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from 'components/app.jsx';
+import { Helog } from './components';
 
 let message = 'helog'
 console.log(message)
 
 const app = document.getElementById('app');
-render(<App/>, app);
+render(<Helog/>, app);
