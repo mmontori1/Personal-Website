@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 let change = 'switch'
 let message = 'hello to helog.com'
-alert(message)
+// alert(message)
 
 export default class Helog extends React.Component {
 	constructor(){
@@ -14,25 +14,29 @@ export default class Helog extends React.Component {
 	}
 	deltaPhrase(){
 		if(this.state.phrase == "helog"){
-			console.log(change)
+			// console.log(change)
 			setTimeout(() => {
-				this.setState({phrase: "bomb"});
+				this.setState({phrase: "hello"});
 			}, 2000)
 		}
 		else{
-			console.log(change)
+			// console.log(change)
 			setTimeout(() => {
 				this.setState({phrase: "helog"});
 			}, 2000)
 		}
 	}
+	rtnFunc(){ //example of a simple return func
+		return 3
+	}
 	render() {
 		// setTimeout(() => {
 		// 	this.setState({tag: ".com"});
 		// }, 3000)
+		// console.log(this.props)
 		this.deltaPhrase()
 		return (
-			<h1 style={{"textAlign" : "center"}} > {this.state.phrase + this.state.tag} </h1>
+			<h1 style={{"textAlign" : "center"}}> {this.state.phrase + this.state.tag} </h1>
 		);
 	}
 }
