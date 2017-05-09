@@ -23,7 +23,8 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new webpack.HotModuleReplacementPlugin(),
+		// new webpack.HotModuleReplacementPlugin(), 
+		// (already handling hot reload with --hot in dev)
 		new webpack.NoEmitOnErrorsPlugin()
 	],
 };

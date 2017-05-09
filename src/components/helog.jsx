@@ -8,7 +8,7 @@ export default class Helog extends React.Component {
 	constructor(){
 		super();
 		this.state = {
-			phrase: "helog",
+			phrase: "hello",
 			tag: ".com"
 		}
 	}
@@ -17,26 +17,20 @@ export default class Helog extends React.Component {
 			// console.log(change)
 			setTimeout(() => {
 				this.setState({phrase: "hello"});
-			}, 2000)
+			}, 1000)
 		}
 		else{
-			// console.log(change)
+			var time = 1000 //Math.floor(10000 * ((Math.random() * 10) + 1));
+			// console.log(time)
 			setTimeout(() => {
 				this.setState({phrase: "helog"});
-			}, 2000)
+			}, time)
 		}
 	}
-	rtnFunc(){ //example of a simple return func
-		return 3
-	}
 	render() {
-		// setTimeout(() => {
-		// 	this.setState({tag: ".com"});
-		// }, 3000)
-		// console.log(this.props)
 		this.deltaPhrase()
 		return (
-			<h1 style={{"textAlign" : "center"}}> {this.state.phrase + this.state.tag} </h1>
+			<h1 /*style={{"textAlign" : "center"}}*/> {this.state.phrase} </h1>
 		);
 	}
 }

@@ -9,13 +9,22 @@ let message = 'helog'
 console.log(message)
 
 export default class App extends React.Component {
+	constructor(){
+		super();
+		this.state = {
+			name: "marhuelo"
+		};
+	}
+
+	changeName(name){
+		this.setState({name});
+	}
+
 	render() {
-		const name = "marhuelo";
 		return (
 			<div>
-				<Name name = "mariano" last = "montori" />
-				<Name name = {name} last = "montori" />
 				<Helog/>
+				<Name changeName = {this.changeName.bind(this)} name = {this.state.name} last = "montori" />
 			</div>
 		);
 	}
