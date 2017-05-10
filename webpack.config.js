@@ -27,4 +27,8 @@ module.exports = {
 		// (already handling hot reload with --hot in dev)
 		new webpack.NoEmitOnErrorsPlugin()
 	],
+	devServer: {
+	    historyApiFallback: true,
+	    hot: true
+	  },
 };

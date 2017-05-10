@@ -4,11 +4,12 @@ import { render } from 'react-dom';
 import { 
 	BrowserRouter as Router,
 	Route,
-	Link
+	// Link
 } from 'react-router-dom'
 import { 
 	FrontPage,
-	Helog
+	Helog,
+	Links
 } from './components';
 
 let message = 'helog'
@@ -17,14 +18,10 @@ console.log(message)
 const app = document.getElementById('app');
 render(
 	<Router>
-		<div>
-			<ul>
-				<li><Link to="/">FrontPage</Link></li>
-				<li><Link to="/onlyhelog">Helog</Link></li>
-			</ul>
-			<hr/>
-			<Route path = "/" component = {FrontPage}/>
-			<Route path = "/onlyhelog" component = {Helog}/>
-		</div>
+			<div>
+				<Links/>
+				<Route path = "/frontpage" component = {FrontPage}/>
+				<Route path = "/onlyhelog/:phrase" component = {Helog}/>
+			</div>
 	</Router>
 	, app);

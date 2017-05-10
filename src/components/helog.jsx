@@ -2,13 +2,14 @@ import React from 'react';
 
 let change = 'switch'
 let message = 'hello to helog.com'
+var hello = "hello"
 // alert(message)
 
 export default class Helog extends React.Component {
 	constructor(){
 		super();
 		this.state = {
-			phrase: "hello",
+			phrase: "helog",
 			tag: ".com"
 		}
 	}
@@ -16,7 +17,7 @@ export default class Helog extends React.Component {
 		if(this.state.phrase == "helog"){
 			// console.log(change)
 			setTimeout(() => {
-				this.setState({phrase: "hello"});
+				this.setState({phrase: hello});
 			}, 1000)
 		}
 		else{
@@ -28,6 +29,10 @@ export default class Helog extends React.Component {
 		}
 	}
 	render() {
+		// console.log(this.props.match != undefined)
+		if(this.props.match != undefined){
+			hello = this.props.match.params.phrase
+		}
 		this.deltaPhrase()
 		return (
 			<h1 /*style={{"textAlign" : "center"}}*/> {this.state.phrase} </h1>
