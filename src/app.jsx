@@ -1,34 +1,30 @@
 import React from 'react';
 import { render } from 'react-dom';
+// import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import { 
-	Helog,
-	Name
+	BrowserRouter as Router,
+	Route,
+	Link
+} from 'react-router-dom'
+import { 
+	FrontPage,
+	Helog
 } from './components';
 
 let message = 'helog'
 console.log(message)
 
-export default class App extends React.Component {
-	constructor(){
-		super();
-		this.state = {
-			name: "marhuelo"
-		};
-	}
-
-	changeName(name){
-		this.setState({name});
-	}
-
-	render() {
-		return (
-			<div>
-				<Helog/>
-				<Name changeName = {this.changeName.bind(this)} name = {this.state.name} last = "montori" />
-			</div>
-		);
-	}
-}
-
 const app = document.getElementById('app');
-render(<App/>, app);
+render(
+	<Router>
+		<div>
+			<ul>
+				<li><Link to="/">FrontPage</Link></li>
+				<li><Link to="/onlyhelog">Helog</Link></li>
+			</ul>
+			<hr/>
+			<Route path = "/" component = {FrontPage}/>
+			<Route path = "/onlyhelog" component = {Helog}/>
+		</div>
+	</Router>
+	, app);
