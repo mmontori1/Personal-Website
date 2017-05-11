@@ -10,6 +10,7 @@ export default class FrontPage extends React.Component {
 		this.state = {
 			name: "marhuelo"
 		};
+		this.changeName = this.changeName.bind(this)
 	}
 
 	changeName(name){
@@ -20,7 +21,7 @@ export default class FrontPage extends React.Component {
 		return (
 			<div>
 				<Helog/>
-				<Name changeName = {this.changeName.bind(this)} name = {this.state.name} last = "montori" />
+				<Name changeName = {this.changeName} name = {this.state.name} last = "montori" />
 			</div>
 		);
 	}

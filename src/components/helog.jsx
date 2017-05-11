@@ -29,13 +29,19 @@ export default class Helog extends React.Component {
 		}
 	}
 	render() {
-		// console.log(this.props.match != undefined)
+		const helogStyle = {
+			textAlign: "center",
+			color: "blue"
+		};
 		if(this.props.match != undefined){
 			hello = this.props.match.params.phrase
 		}
+		else{
+			hello = "hello"
+		}
 		this.deltaPhrase()
 		return (
-			<h1 /*style={{"textAlign" : "center"}}*/> {this.state.phrase} </h1>
+			<h1 style = {helogStyle}> {this.state.phrase} </h1>
 		);
 	}
 }
