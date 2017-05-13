@@ -3,7 +3,10 @@ import React from 'react';
 let change = 'switch'
 let message = 'hello to helog.com'
 var hello = "hello"
-// alert(message)
+const helogStyle = {
+	textAlign: "center",
+	color: "blue"
+};
 
 export default class Helog extends React.Component {
 	constructor(){
@@ -12,34 +15,38 @@ export default class Helog extends React.Component {
 			phrase: "helog",
 			tag: ".com"
 		}
+		this.nextPhrase = this.nextPhrase.bind(this)
+		this.deltaPhrase = this.deltaPhrase.bind(this)
 	}
-	deltaPhrase(){
-		if(this.state.phrase == "helog"){
-			// console.log(change)
-			setTimeout(() => {
-				this.setState({phrase: hello});
-			}, 1000)
-		}
-		else{
-			var time = 1000 //Math.floor(10000 * ((Math.random() * 10) + 1));
-			// console.log(time)
-			setTimeout(() => {
-				this.setState({phrase: "helog"});
-			}, time)
-		}
-	}
-	render() {
-		const helogStyle = {
-			textAlign: "center",
-			color: "blue"
-		};
+
+	nextPhrase(){
 		if(this.props.match != undefined){
 			hello = this.props.match.params.phrase
 		}
 		else{
 			hello = "hello"
 		}
+	}
+
+	deltaPhrase(){
+		if(this.state.phrase == "helog"){
+			setTimeout(() => {
+				this.setState({phrase: hello});
+			}, 1000)
+		}
+		else{
+			var time = 1000
+			setTimeout(() => {
+				this.setState({phrase: "helog"});
+			}, time)
+		}
+	}
+
+	componentDidMount(){
+		this.nextPhrase()
 		this.deltaPhrase()
+	}
+	render() {
 		return (
 			<h1 style = {helogStyle}> {this.state.phrase} </h1>
 		);
