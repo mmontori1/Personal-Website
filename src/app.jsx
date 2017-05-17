@@ -1,23 +1,20 @@
 import React from 'react';
 import { render } from 'react-dom';
-// import { Router, Route, IndexRoute, hashHistory } from 'react-router';
-import { Provider } from 'react-redux'
-import { 
-	BrowserRouter as Router,
-	Route,
-	// hashHistory,
-} from 'react-router-dom'
-// import { 
-// } from './components';
-
-const style = {
-	textAlign: "center"
-}
+import { Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { ConnectedRouter as Router, routerMiddleware } from 'react-router-redux';
+import createHistory from 'history/createBrowserHistory';
+import{
+	Home
+} from './pages';
 const app = document.getElementById('app');
+// const history = createHistory()
 render(
 	<Provider>
-		<div style = {style}>
-			Page is a WIP
-		</div>
+		<Router>
+			<div>
+				<Route exact path = "/" component = {Home}/>
+			</div>
+		</Router>
 	</Provider>
 	, app);
