@@ -11,6 +11,7 @@
   "author": "Mariano Montori",
   "license": "ISC",
   "dependencies": {
+    "connected-react-router": "^4.2.1",
     "history": "^4.6.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
@@ -19,7 +20,8 @@
     "react-router-dom": "^4.1.1",
     "react-router-redux": "^4.0.8",
     "react-thunk": "^1.0.0",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
