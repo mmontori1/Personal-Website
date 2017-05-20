@@ -5,31 +5,33 @@ import { push } from 'connected-react-router'
 // } from './';
 // import { store } from '../store.js'
 
-@connect((store)) => {
-	return {};
-})
-
 const style = {
 	textAlign: "center"
 }
 
-export default class Home extends React.Component {
-
-	goToCats(){
-		this.props.dispatch(push('/cats')
-	}
-
+class Home extends React.Component {
 	render() {
 		return (
 			<div style = {style}>
 				<div> Page is a WIP </div>
-				<button onClick={}> go to cats </button>
+				<button onClick={this.props.goToCats}> go to cats </button>
 			</div>
 		);
 	}
 }
 
-// function mapStateToProps(state) {
-// }
+const mapStateToProps = (state) => {
+  return {
+  }
+}
 
-// export default connect(mapStateToProps)(Home);
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		goToCats: () => {
+			dispatch(push('/cats'))
+		}
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
