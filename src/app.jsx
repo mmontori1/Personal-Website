@@ -1,8 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Route, Switch } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+// import { Provider } from 'react-redux';
 // import { ConnectedRouter, routerMiddleware } from 'connected-react-router';
+import {
+	Header
+} from './components';
 // import{
 // 	Home
 // } from './pages';
@@ -10,7 +13,9 @@ import { Provider } from 'react-redux';
 const app = document.getElementById('app');
 
 render(
-	<div>
-		Page is a WIP
-	</div>
+	<Router>
+		<div>
+			<Route /*exact*/ path = "/" component = {Header}/>
+		</div>
+	</Router>
 	, app);
