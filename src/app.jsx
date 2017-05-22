@@ -9,7 +9,7 @@ import {
 // import{
 // 	Home
 // } from './pages';
-import { store, history }from './store.js';
+import { store, history } from './store.js';
 const app = document.getElementById('app');
 
 render(
