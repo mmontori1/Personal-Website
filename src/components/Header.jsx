@@ -6,11 +6,8 @@ const NavBar = styled.ul`
 	list-style-type: none;
     background-color: #222;
     text-align: right;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-	right: 0;
+    position: relative;
+    margin: -8px;
 `;
 
 const StyledLink = styled(Link)`
