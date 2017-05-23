@@ -13,31 +13,26 @@ const NavBar = styled.ul`
 	right: 0;
 `;
 
-const Button = styled.li`
-	display: inline;
-`;
-
-const Word = styled.nav `
-	display: inline;
+const StyledLink = styled(Link)`
 	font-family: sans-serif;
     display: inline-block;
     color: aliceblue;
     text-align: center;
     padding: 12px 16px;
+    text-decoration: none;
     &:hover {
 	    background-color: #444;
     	text-decoration: underline;
 	}
 `;
-
 export default class Header extends React.Component {
 	render(){
 		return (
 				<NavBar>
-					<Button><Link to="/"><Word>Home</Word></Link></Button>
-					<Button><Link to="/about"><Word>About</Word></Link></Button>
-					<Button><Link to="/projects"><Word>Projects</Word></Link></Button>
-					<Button><Link to="/resume"><Word>Resume</Word></Link></Button>
+					<StyledLink to="/">Home</StyledLink>
+					<StyledLink to="/about">About</StyledLink>
+					<StyledLink to="/projects">Projects</StyledLink>
+					<StyledLink to="/resume">Resume</StyledLink>
 				</NavBar>
 		)
 	}
