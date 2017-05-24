@@ -5,7 +5,7 @@ import rootReducer from './reducers'
 const history = createHistory()
 const middleware = routerMiddleware(history)
 // const initialState = {
-// 	menu: null
+// 	menu: false
 // };
 const store = createStore(
   rootReducer,

@@ -4,11 +4,15 @@ import styled from 'styled-components';
 import {
 	toggleMenu
 } from '../actions'
+import {
+  Header
+} from '../components';
 
 const StyledDiv = styled.div`
   border: ${props => props.menu ? '2px solid black' : 'auto'};
   border-radius: 3px;
-  text-align: center;
+  text-align: ${props => props.menu ? 'center' : 'left'};
+  margin: 10px
 `;
 
 class Home extends React.Component {
@@ -18,24 +22,21 @@ class Home extends React.Component {
 
 	render(){
 		return (
-				<StyledDiv>
-					Page is a WIP
-				</StyledDiv>
+        <div>
+          <Header/>
+  				<StyledDiv menu = {this.props.menu}>
+  					Page is a WIP
+  				</StyledDiv>
+        </div>
 		)
 	}
 }
 
 function mapStateToProps(state) {
-    // console.log(state);
+    const { menu } = state.menu;
     return{
-    	state
+    	menu
     }
 }
-
-// function mapDispatchToProps(state) {
-//     return {
-//     };
-// }
-
 
 export default connect(mapStateToProps)(Home)
