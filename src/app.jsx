@@ -7,31 +7,23 @@ import {
 	Header
 } from './components';
 import{
-	Home
+	Container,
+	Home,
+	About
 } from './pages';
 import { store, history } from './store.js';
-import { injectGlobal } from 'styled-components';
-
-injectGlobal`
-  body {
-    background-size: 40px 40px;
-    background-image: linear-gradient(to right, #282C43 1px, transparent 1px), 
-    				  linear-gradient(to bottom, #282C43 1px, transparent 1px);
-    background-color: #101334;
-  }
-`;
 
 const app = document.getElementById('app');
 
 render(
 	<Provider store = {store}>
 	    <ConnectedRouter history = {history}>
-			<div>
+			<Container>
 				<Route exact path = "/" component = {Home}/>
-				<Route path = "/about" component = {Header}/>
+				<Route path = "/about" component = {About}/>
 				<Route path = "/projects" component = {Header}/>
 				<Route path = "/resume" component = {Header}/>
-			</div>
+			</Container>
 		</ConnectedRouter>
   	</Provider>
 , app);

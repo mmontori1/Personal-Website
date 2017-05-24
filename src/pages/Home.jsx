@@ -9,6 +9,7 @@ import {
 } from '../components';
 
 const StyledDiv = styled.div`
+  color: white;
   border: ${props => props.menu ? '2px solid black' : 'auto'};
   border-radius: 3px;
   text-align: ${props => props.menu ? 'center' : 'left'};
@@ -16,9 +17,9 @@ const StyledDiv = styled.div`
 `;
 
 class Home extends React.Component {
-	componentDidMount() {
-        this.props.dispatch(toggleMenu(true));
-    }
+  componentDidMount() {
+    this.props.dispatch(toggleMenu(true));
+  }
 
 	render(){
 		return (
@@ -33,7 +34,7 @@ class Home extends React.Component {
 }
 
 function mapStateToProps(state) {
-    const { menu } = state.menu;
+    var { menu } = state.menu;
     return{
     	menu
     }
