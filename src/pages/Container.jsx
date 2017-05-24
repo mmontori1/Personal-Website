@@ -28,7 +28,6 @@ class Container extends React.Component {
   }
 
 	render(){
-    // console.log(this.props.menu)
 		return (
         <StyledDiv menu = {this.props.menu}>
           {this.props.children}

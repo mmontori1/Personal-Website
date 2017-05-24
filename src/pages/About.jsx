@@ -5,16 +5,9 @@ import {
 	toggleMenu
 } from '../actions'
 import {
-  Header
+  Header,
+  WIP
 } from '../components';
-
-const StyledDiv = styled.div`
-  color: black;
-  border: 2px solid black;
-  border-radius: 3px;
-  text-align: center;
-  margin: 10px
-`;
 
 class About extends React.Component {
   componentDidMount() {
@@ -25,16 +18,14 @@ class About extends React.Component {
 		return (
         <div>
           <Header/>
-  				<StyledDiv menu = {this.props.menu}>
-            Page is a WIP
-          </StyledDiv>
+  				<WIP menu = {this.props.menu}/>
         </div>
 		)
 	}
 }
 
 function mapStateToProps(state) {
-    const { menu } = state.menu;
+    var { menu } = state.menu;
     return{
     	menu
     }
