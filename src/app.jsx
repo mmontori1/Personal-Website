@@ -6,37 +6,24 @@ import { ConnectedRouter } from 'react-router-redux'
 import {
 	Header
 } from './components';
-// import{
-// 	Home
-// } from './pages';
+import{
+	Container,
+	Home,
+	About
+} from './pages';
 import { store, history } from './store.js';
-import { injectGlobal } from 'styled-components';
-
-injectGlobal`
-	body { 
-		background-size: 40px 40px;
-	    background-image: 	linear-gradient(to right, #282C43 1px, transparent 1px), 
-	    					linear-gradient(to bottom, #282C43 1px, transparent 1px);
-		background-color: #101334
-	}
-`;
 
 const app = document.getElementById('app');
 
 render(
 	<Provider store = {store}>
 	    <ConnectedRouter history = {history}>
-			<div>
-				<Route /*exact*/ path = "/" component = {Header}/>
-				<Route /*exact*/ path = "/about" component = {Header}/>
-				<Route /*exact*/ path = "/projects" component = {Header}/>
-				<Route /*exact*/ path = "/resume" component = {Header}/>
-			</div>
+			<Container>
+				<Route exact path = "/" component = {Home}/>
+				<Route path = "/about" component = {About}/>
+				<Route path = "/projects" component = {Header}/>
+				<Route path = "/resume" component = {Header}/>
+			</Container>
 		</ConnectedRouter>
   	</Provider>
 , app);
-
-
-	    // background-size: 40px 40px;
-	    // background-image: 	linear-gradient(to right, #282C43 1px, transparent 1px), 
-	    // 					linear-gradient(to bottom, #282C43 1px, transparent 1px);
