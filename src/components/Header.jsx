@@ -30,6 +30,7 @@ export default class Header extends React.Component {
 					<StyledLink to="/about">About</StyledLink>
 					<StyledLink to="/projects">Projects</StyledLink>
 					<StyledLink to="/resume">Resume</StyledLink>
+					<StyledLink to="/extras">Extras</StyledLink>
 				</NavBar>
 		)
 	}

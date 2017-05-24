@@ -23,6 +23,7 @@ render(
 				<Route path = "/about" component = {About}/>
 				<Route path = "/projects" component = {Header}/>
 				<Route path = "/resume" component = {Header}/>
+				<Route path = "/extras" component = {Header}/>
 			</Container>
 		</ConnectedRouter>
   	</Provider>
