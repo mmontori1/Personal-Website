@@ -11,16 +11,12 @@ import {
 
 /*
 Content to add:
-  -Paragraph talking about 
-  -Link to my github to display other work
-  -TBD, with more projects
-    -Project components which have:
-      -Name/Title
-      -Picture
-      -Little desc. about the project
+  -Extra cool stuff that I like
+    -Melee stuff
+    -TBD
 */
 
-class Projects extends React.Component {
+class Extras extends React.Component {
   componentDidMount() {
     this.props.dispatch(toggleMenu(false));
   }
@@ -29,6 +25,8 @@ class Projects extends React.Component {
 		return (
         <div>
           <Header/>
+          <WIP menu = {this.props.menu}/>
+          <WIP menu = {this.props.menu}/>
           <WIP menu = {this.props.menu}/>
           <WIP menu = {this.props.menu}/>
         </div>
@@ -43,4 +41,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(Projects)
+export default connect(mapStateToProps)(Extras)

@@ -3,13 +3,13 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { Route, Switch } from 'react-router-dom'
 import { ConnectedRouter } from 'react-router-redux'
-import {
-	Header
-} from './components';
 import{
 	Container,
 	Home,
-	About
+	About,
+	Projects,
+	Resume,
+	Extras
 } from './pages';
 import { store, history } from './store.js';
 
@@ -21,9 +21,9 @@ render(
 			<Container>
 				<Route exact path = "/" component = {Home}/>
 				<Route path = "/about" component = {About}/>
-				<Route path = "/projects" component = {Header}/>
-				<Route path = "/resume" component = {Header}/>
-				<Route path = "/extras" component = {Header}/>
+				<Route path = "/projects" component = {Projects}/>
+				<Route path = "/resume" component = {Resume}/>
+				<Route path = "/extras" component = {Extras}/>
 			</Container>
 		</ConnectedRouter>
   	</Provider>

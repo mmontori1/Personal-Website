@@ -9,6 +9,30 @@ import {
   WIP
 } from '../components';
 
+/*
+Content to add:
+  -About Me Paragraph
+    -UMich Student
+      -Year/Grade
+      -Major
+      -Other Info?
+    -Clubs
+      -Hackers VP
+      -MHacks Hardware Lead
+    -Hackathons
+      -Which I've attended
+    -What I like to hack
+      -Unity
+      -Web Dev
+      -Experience with C++ other stuff
+    -Games
+  -Contact Info
+    -Email
+    -Facebook
+    -Github
+    -LinkedIn
+*/
+
 class About extends React.Component {
   componentDidMount() {
     this.props.dispatch(toggleMenu(false));
