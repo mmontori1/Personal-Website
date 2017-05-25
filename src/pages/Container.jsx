@@ -5,7 +5,24 @@ import {
 	toggleMenu
 } from '../actions'
 
-const StyledDiv = styled.div`
+const Background = styled.div`
+  position: fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: ${props => props.menu ? 'linear-gradient(0deg, #3030a9, #243380, #101334)': 'white'};
+`;
+
+/*
+  possibilities:
+    'linear-gradient(45deg, #3030a9, #243380, #101334)'
+    'linear-gradient(0deg, #243380, #101334)'
+*/
+
+const Grid = styled.div`
   position: fixed;
   padding:0;
   margin:0;
@@ -14,7 +31,6 @@ const StyledDiv = styled.div`
   width: 100%;
   height: 100%;
   background-size: ${props => props.menu ? '40px 40px' : 'auto'};
-  background-color: ${props => props.menu ? '#101334' : 'white'};
   background-image: ${props => props.menu ? 'linear-gradient(to right, #282C43 1px, transparent 1px), linear-gradient(to bottom, #282C43 1px, transparent 1px)' : 'none'};
 `;
 
@@ -29,9 +45,11 @@ class Container extends React.Component {
 
 	render(){
 		return (
-        <StyledDiv menu = {this.props.menu}>
-          {this.props.children}
-        </StyledDiv>
+        <Background menu = {this.props.menu}>
+          <Grid menu = {this.props.menu}>
+            {this.props.children}
+          </Grid>
+        </Background>
 		)
 	}
 }

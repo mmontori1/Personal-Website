@@ -22,7 +22,9 @@ Content to add:
 
 class Projects extends React.Component {
   componentDidMount() {
-    this.props.dispatch(toggleMenu(false));
+    if(this.props.menu){
+      this.props.dispatch(toggleMenu(false));
+    }
   }
 
 	render(){

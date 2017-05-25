@@ -18,7 +18,9 @@ Content to add:
 
 class Extras extends React.Component {
   componentDidMount() {
-    this.props.dispatch(toggleMenu(false));
+    if(this.props.menu){
+      this.props.dispatch(toggleMenu(false));
+    }
   }
 
 	render(){
