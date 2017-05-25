@@ -18,7 +18,7 @@ const StyledLink = styled(Link)`
   overflow: hidden;
   &:hover {
       color: #04040C;
-      background: #FFC036;
+      background: #FFDF00;
       box-shadow: inset 0 0 15px #000000;
   }
 `;

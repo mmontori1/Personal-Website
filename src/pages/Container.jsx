@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import {
 	toggleMenu
 } from '../actions'
@@ -22,6 +22,11 @@ const Background = styled.div`
     'linear-gradient(0deg, #243380, #101334)'
 */
 
+const GridMove = keyframes`
+  0% {background-position: 0% 0%}
+  100% {background-position: 100% 100%}
+`
+
 const Grid = styled.div`
   position: fixed;
   padding:0;
@@ -32,6 +37,7 @@ const Grid = styled.div`
   height: 100%;
   background-size: ${props => props.menu ? '40px 40px' : 'auto'};
   background-image: ${props => props.menu ? 'linear-gradient(to right, #282C43 1px, transparent 1px), linear-gradient(to bottom, #282C43 1px, transparent 1px)' : 'none'};
+  animation: ${GridMove} 40s linear infinite;
 `;
 
 class Container extends React.Component {

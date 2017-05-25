@@ -8,6 +8,7 @@ const NavBar = styled.ul`
     text-align: right;
     position: relative;
     margin: -8px;
+    margin-top: 0px;
 `;
 
 const StyledLink = styled(Link)`
@@ -20,6 +21,7 @@ const StyledLink = styled(Link)`
     &:hover {
 	    background-color: #444;
     	text-decoration: underline;
+      	box-shadow: inset 0 0 4px #000000;
 	}
 `;
 export default class Header extends React.Component {
