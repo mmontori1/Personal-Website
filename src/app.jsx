@@ -12,7 +12,7 @@ import{
 	Extras
 } from './pages';
 import { store, history } from './store.js';
-require('../static/falco.ico');
+require('../static/favicon.ico');
 
 const app = document.getElementById('app');
 

@@ -27,7 +27,7 @@ module.exports = {
 			},
 			{
 		          test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
-		          loader: 'file-loader?name=falco.ico'
+		          loader: 'file-loader?name=favicon.ico'
 		      }
 		]
 	},
