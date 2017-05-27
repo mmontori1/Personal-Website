@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledLink = styled(Link)`
@@ -7,13 +7,13 @@ const StyledLink = styled(Link)`
   border-radius: 15px 50px 12px 40px;
   box-shadow: 0px 0px 10px;
   text-align: center;
-  width: 25%;
+  width: 45%;
   background: #04040C;
   font-size: 3vw;
   font-family: sans-serif;
   color: #FFC036;
   text-decoration: none;
-  margin: 10px 10px 15px 10%;
+  margin: 10px 10px 15px;
   padding: 10px 24px;
   overflow: hidden;
   &:hover {
@@ -25,10 +25,11 @@ const StyledLink = styled(Link)`
 
 export default class MenuButton extends React.Component {
 	render(){
+    const { route, val } = this.props;
 		return (
-      <StyledLink to={this.props.route}>
-        {this.props.children}
-      </StyledLink>
-		)
+        <StyledLink to = {route} style = {{marginLeft: val}}>
+            {this.props.children}
+        </StyledLink>
+    )
 	}
 }
