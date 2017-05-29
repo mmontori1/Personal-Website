@@ -5,7 +5,9 @@ import styled from 'styled-components';
 const StyledLink = styled(Link)`
   display: block;
   border-radius: 15px 50px 12px 40px;
-  box-shadow: 0px 0px 10px;
+  box-shadow: 0px 0px 15px,
+              2px 2px 5px,
+              -2px -2px 5px;
   text-align: center;
   width: 45%;
   background: #04040C;
@@ -19,7 +21,8 @@ const StyledLink = styled(Link)`
   &:hover {
       color: #04040C;
       background: #FFDF00;
-      box-shadow: inset 0 0 15px #000000;
+      box-shadow: inset 2px 2px 20px #000000,
+                  0px 0px 15px #000000;
   }
 `;
 
