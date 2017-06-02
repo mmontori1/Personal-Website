@@ -21,6 +21,7 @@ const OuterBorder = styled.div`
   margin-top: 10%;
   padding: 17px 17px;
   box-shadow: 0px -5px 0px 0px #253186;
+  background: rgba(48, 59, 140, .25);
   opacity: 0.9;
   border-bottom: none;
   position: relative;
