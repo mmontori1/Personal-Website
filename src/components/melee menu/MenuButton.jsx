@@ -31,7 +31,7 @@ export default class MenuButton extends React.Component {
     const { route, val } = this.props;
 		return (
         <StyledLink to = {route} style = {{marginLeft: val}}>
-            {this.props.children}
+          {this.props.children}
         </StyledLink>
     )
 	}
