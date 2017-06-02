@@ -11,10 +11,6 @@ const NavBar = styled.ul`
     margin-top: 0px;
 `;
 
-const button = `
-	
-`;
-
 const StyledLink = styled(Link)`
 	display: inline-block;
 	font-family: sans-serif;

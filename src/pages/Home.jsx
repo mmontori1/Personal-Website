@@ -13,14 +13,14 @@ import {
 
 const OuterBorder = styled.div`
   align: center;
-  border: 2px solid #343F94;
-  border-radius: 3px;
-  border-width: 5px;
+  border: 5px solid #343F94;
+  border-radius: 6px;
+  border-width: 8px;
   width: 50%;
   margin: auto;
   margin-top: 10%;
-  padding: 20px 20px;
-  box-shadow: 0 0 0 2pt #253186;
+  padding: 17px 17px;
+  box-shadow: 0 0 0 4pt #253186;
   opacity: 0.9;
 `;
 
