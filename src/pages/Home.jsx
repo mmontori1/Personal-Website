@@ -38,13 +38,28 @@ const OuterBorder = styled.div`
   position: relative;
 `;
 
+const UpperBorder = styled.div`  
+  background: rgba(48, 59, 140, .4);
+  position: absolute;
+  margin-top: -76px;
+  margin-left: 38%;
+  padding: 20px 10px;
+  border: 5px solid #253186;
+  border-width: 6.5px;
+  border-bottom: none;
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -o-transform: skew(-20deg);
+`;
+
 /*
+width: 5%;
+height: 10%;
 
 about: learn more about me!
 projects: look at my work
 resume: view my portfolio
 extras: some other cool stuff
-
 */
 
 class Home extends React.Component {
@@ -54,8 +69,11 @@ class Home extends React.Component {
 
 	render(){
 		return (
-        <div>          
+        <div>      
           <OuterBorder>
+            <UpperBorder/>
+            <UpperBorder style = {{marginLeft: '42%'}}/>    
+            <UpperBorder style = {{marginLeft: '46%'}}/>
             <Title>Main Menu</Title>
             <div>
               <MenuButton route = "/about" val = "-10%">About</MenuButton>
