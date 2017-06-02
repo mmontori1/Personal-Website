@@ -4,8 +4,7 @@ import { Provider } from 'react-redux';
 import { Route, Switch } from 'react-router-dom'
 import { ConnectedRouter } from 'react-router-redux'
 import{
-	Container,
-	Home,
+	MeleeHome,
 	About,
 	Projects,
 	Resume,
@@ -19,13 +18,13 @@ const app = document.getElementById('app');
 render(
 	<Provider store = {store}>
 	    <ConnectedRouter history = {history}>
-			<Container>
-				<Route exact path = "/" component = {Home}/>
+			<div>
+				<Route exact path = "/" component = {MeleeHome}/>
 				<Route path = "/about" component = {About}/>
 				<Route path = "/projects" component = {Projects}/>
 				<Route path = "/resume" component = {Resume}/>
 				<Route path = "/extras" component = {Extras}/>
-			</Container>
+			</div>
 		</ConnectedRouter>
   	</Provider>
 , app);

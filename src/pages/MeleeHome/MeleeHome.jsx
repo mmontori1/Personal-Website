@@ -3,7 +3,10 @@ import { connect } from 'react-redux';
 import styled, { keyframes } from 'styled-components';
 import {
 	toggleMenu
-} from '../actions'
+} from '../../actions'
+import {
+  MenuScreen
+} from './'
 
 const Background = styled.div`
   position: fixed;
@@ -40,7 +43,7 @@ const Grid = styled.div`
   animation: ${GridMove} 40s linear infinite;
 `;
 
-class Container extends React.Component {
+class MeleeHome extends React.Component {
 	componentDidMount() {
     if(this.props.pathname == '/')
       this.props.dispatch(toggleMenu(true));
@@ -53,7 +56,7 @@ class Container extends React.Component {
 		return (
         <Background menu = {this.props.menu}>
           <Grid menu = {this.props.menu}>
-            {this.props.children}
+            <MenuScreen/>
           </Grid>
         </Background>
 		)
@@ -69,4 +72,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(Container)
+export default connect(mapStateToProps)(MeleeHome)

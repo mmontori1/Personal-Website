@@ -5,7 +5,7 @@ import {
 	MenuTag,
 	MenuTitle,
 	UpperBorder
-} from './melee menu';
+} from './MeleeMenu';
 
 export {
 	Header,

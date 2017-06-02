@@ -3,18 +3,18 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import {
 	toggleMenu
-} from '../actions'
+} from '../../actions'
 import {
   MenuButton,
   MenuTag,
   MenuTitle,
   UpperBorder
-} from '../components';
+} from '../../components';
 
 const OuterBorder = styled.div`
   align: center;
   border: 5px solid #343F94;
-  border-radius: 6px;
+  border-radius: 6px 0px 6px 6px;
   border-width: 8px;
   width: 50%;
   margin: auto;
@@ -26,7 +26,7 @@ const OuterBorder = styled.div`
   position: relative;
 `;
 
-class Home extends React.Component {
+class MenuScreen extends React.Component {
   componentDidMount() {
     this.props.dispatch(toggleMenu(true));
   }
@@ -53,4 +53,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps)(MenuScreen)
