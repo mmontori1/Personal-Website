@@ -1,8 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  Header
-} from '../components';
 
 const StyledDiv = styled.div`
   color: white;
@@ -20,13 +17,16 @@ export default class MenuTag extends React.Component {
 	render(){
 		return (
     	<StyledDiv>
-        learn more about me!
+        Welcome!
     	</StyledDiv>
 		)
 	}
 }
 
 /*
+  <StyledDiv>
+    learn more about me!
+  </StyledDiv>
   <StyledDiv>
     look at some of my work
   </StyledDiv>
@@ -36,5 +36,4 @@ export default class MenuTag extends React.Component {
   <StyledDiv>
     some other cool stuff
   </StyledDiv>
-
 */

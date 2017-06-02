@@ -1,7 +1,9 @@
 import Header from './Header.jsx'
-import MenuButton from './MenuButton.jsx'
-import MenuTag from './MenuTag.jsx'
 import WIP from './WIP.jsx'
+import {
+	MenuButton,
+	MenuTag
+} from './melee menu';
 
 export {
 	Header,
