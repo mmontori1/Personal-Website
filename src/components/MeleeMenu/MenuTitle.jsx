@@ -10,8 +10,12 @@ const Title = styled.div`
   font-family: sans-serif;
   position: absolute;
   width: 40%;
-  margin-top: -12%;
+  margin-top: -80px;
   margin-left: -2%;
+  @media screen and (max-width: 800px) {
+    margin-top: -15%;
+    margin-left: auto;
+  }
 `;
 
 export default class MenuTitle extends React.Component {
