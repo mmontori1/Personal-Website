@@ -2,6 +2,7 @@ import Header from './Header.jsx'
 import WIP from './WIP.jsx'
 import {
 	Grid,
+	Portrait,
 	MenuButton,
 	MenuTag,
 	MenuTitle,
@@ -11,6 +12,7 @@ import {
 export {
 	Grid,
 	Header,
+	Portrait,
 	MenuButton,
 	MenuTag,
 	MenuTitle,

@@ -8,6 +8,7 @@ import {
   MenuButton,
   MenuTag,
   MenuTitle,
+  Portrait,
   UpperBorder
 } from '../../components';
 
@@ -37,10 +38,13 @@ class MenuScreen extends React.Component {
       <OuterBorder>
         <UpperBorder/>
         <MenuTitle/>
-        <MenuButton route = "/about" val = "-10%" >About</MenuButton>
-        <MenuButton route = "/projects" val = "-7%" >Projects</MenuButton>
-        <MenuButton route = "/resume" val = "-15%" >Resume</MenuButton>
-        <MenuButton route = "/extras" val = "-10%" >Extras</MenuButton> 
+        <div>
+          <Portrait/>
+            <MenuButton route = "/about" val = "-10%" >About</MenuButton>
+            <MenuButton route = "/projects" val = "-7%" >Projects</MenuButton>
+            <MenuButton route = "/resume" val = "-15%" >Resume</MenuButton>
+            <MenuButton route = "/extras" val = "-10%" >Extras</MenuButton> 
+        </div>
         <MenuTag/>
       </OuterBorder>
 		)

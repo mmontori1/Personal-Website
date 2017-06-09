@@ -25,10 +25,10 @@ module.exports = {
 				exclude: /node_modules/,
 				loaders: ['react-hot-loader', 'babel-loader?presets[]=react,presets[]=es2015']
 			},
-			{
+	      	{
 	          test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
-	          loader: 'file-loader?name=favicon.ico'
-	      }
+	          loader: ['file-loader', 'file-loader?name=favicon']
+	      	}
 		]
 	},
 	plugins: [

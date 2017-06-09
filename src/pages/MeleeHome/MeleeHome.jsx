@@ -8,7 +8,7 @@ import {
   MenuScreen
 } from './';
 import {
-  Grid
+  Grid,
 } from '../../components/MeleeMenu';
 
 const Background = styled.div`
