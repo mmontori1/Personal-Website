@@ -1,12 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import {
 	toggleMenu
-} from '../../actions'
+} from '../../actions';
 import {
   MenuScreen
-} from './'
+} from './';
+import {
+  Grid
+} from '../../components/MeleeMenu';
 
 const Background = styled.div`
   position: fixed;
@@ -17,30 +20,6 @@ const Background = styled.div`
   width: 100%;
   height: 100%;
   background: ${props => props.menu ? 'linear-gradient(0deg, #3030a9, #243380, #101334)': 'white'};
-`;
-
-/*
-  possibilities:
-    'linear-gradient(45deg, #3030a9, #243380, #101334)'
-    'linear-gradient(0deg, #243380, #101334)'
-*/
-
-const GridMove = keyframes`
-  0% {background-position: 0% 0%}
-  100% {background-position: 100% 100%}
-`
-
-const Grid = styled.div`
-  position: fixed;
-  padding:0;
-  margin:0;
-  top:0;
-  left:0;
-  width: 100%;
-  height: 100%;
-  background-size: ${props => props.menu ? '40px 40px' : 'auto'};
-  background-image: ${props => props.menu ? 'linear-gradient(to right, #282C43 1px, transparent 1px), linear-gradient(to bottom, #282C43 1px, transparent 1px)' : 'none'};
-  animation: ${GridMove} 40s linear infinite;
 `;
 
 class MeleeHome extends React.Component {
@@ -55,9 +34,8 @@ class MeleeHome extends React.Component {
 	render(){
 		return (
         <Background menu = {this.props.menu}>
-          <Grid menu = {this.props.menu}>
-            <MenuScreen/>
-          </Grid>
+          <Grid menu = {this.props.menu}/>
+          <MenuScreen/>
         </Background>
 		)
 	}

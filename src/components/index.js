@@ -1,6 +1,7 @@
 import Header from './Header.jsx'
 import WIP from './WIP.jsx'
 import {
+	Grid,
 	MenuButton,
 	MenuTag,
 	MenuTitle,
@@ -8,6 +9,7 @@ import {
 } from './MeleeMenu';
 
 export {
+	Grid,
 	Header,
 	MenuButton,
 	MenuTag,
