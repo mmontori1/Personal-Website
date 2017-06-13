@@ -12,20 +12,19 @@ const NavBar = styled.ul`
 `;
 
 const StyledLink = styled(Link)`
-	display: inline-block;
+	display: none;
 	font-family: sans-serif;
     color: aliceblue;
     text-align: center;
     padding: 12px 16px;
     text-decoration: none;
-    width: 50px; 
     &:hover {
 	    background-color: #444;
     	text-decoration: underline;
       	box-shadow: inset 0 0 4px #000000;
 	}
-	@media screen and (max-width: 600px) {
-	  display: none;
+	@media screen and (min-width: 600px) {
+	  display: inline-block;
 	}
 `;
 
@@ -37,7 +36,7 @@ const StyledBurger = styled.div`
     padding: 12px 16px;
     text-decoration: none;
     width: 50px; 
-	@media screen and (min-width: 601px) {
+	@media screen and (min-width: 600px) {
 	  display: none;
 	}
 `;

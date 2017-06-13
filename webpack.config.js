@@ -26,8 +26,8 @@ module.exports = {
 				loaders: ['react-hot-loader', 'babel-loader?presets[]=react,presets[]=es2015']
 			},
 	      	{
-	          test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
-	          loader: ['file-loader', 'file-loader?name=favicon']
+	        	test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
+	         	loader: "file-loader?name=[name].[ext]"
 	      	}
 		]
 	},

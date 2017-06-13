@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SlantBorder } from './';
+import SlantBorder from './SlantBorder.jsx';
 
 const BigSlant = styled.div`  
   background: rgba(48, 59, 140, .4);

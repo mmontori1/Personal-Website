@@ -12,18 +12,18 @@ import{
 } from './pages';
 import { store, history } from './store.js';
 
-const favicon = require('../static/favicon.ico');
 const app = document.getElementById('app');
+const favicon = require('../static/favicon.ico');
 
 render(
 	<Provider store = {store}>
 	    <ConnectedRouter history = {history}>
 			<div>
-				<Route exact path = "/" component = {MeleeHome}/>
+				<Route exact path = "/" component = {About}/>
 				<Route path = "/about" component = {About}/>
 				<Route path = "/projects" component = {Projects}/>
 				<Route path = "/resume" component = {Resume}/>
-				<Route path = "/extras" component = {Extras}/>
+				<Route path = "/extras" component = {MeleeHome}/>
 			</div>
 		</ConnectedRouter>
   	</Provider>

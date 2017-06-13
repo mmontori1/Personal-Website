@@ -4,12 +4,9 @@ import styled from 'styled-components';
 import {
 	toggleMenu
 } from '../../actions';
-import {
-  MenuScreen
-} from './';
-import {
-  Grid,
-} from '../../components/MeleeMenu';
+import MenuScreen from './MenuScreen.jsx';
+import MenuScreenMobile from './MenuScreenMobile.jsx';
+import Grid from './Grid.jsx';
 
 const Background = styled.div`
   position: fixed;
@@ -24,28 +21,27 @@ const Background = styled.div`
 
 class MeleeHome extends React.Component {
 	componentDidMount() {
-    if(this.props.pathname == '/')
+    if(!this.props.menu){
       this.props.dispatch(toggleMenu(true));
-    else{
-      this.props.dispatch(toggleMenu(false));
     }
   }
 
 	render(){
 		return (
-        <Background menu = {this.props.menu}>
-          <Grid menu = {this.props.menu}/>
-          <MenuScreen/>
-        </Background>
+        <div>
+          <Background menu = {this.props.menu}>
+            <Grid menu = {this.props.menu}/>
+            <MenuScreen/>
+          </Background>
+          <MenuScreenMobile/>
+        </div>
 		)
 	}
 }
 
 function mapStateToProps(state) {
-    var { pathname } = state.router.location;
     var { menu } = state.menu;
     return{
-      pathname,
       menu
     }
 }

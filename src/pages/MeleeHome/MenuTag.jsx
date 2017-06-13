@@ -24,24 +24,6 @@ export default class MenuTag extends React.Component {
 }
 
 /*
-  <StyledDiv>
-    learn more about me!
-  </StyledDiv>
-  <StyledDiv>
-    look at some of my work
-  </StyledDiv>
-  <StyledDiv>
-    view my personal portfolio
-  </StyledDiv>
-  <StyledDiv>
-    some other cool stuff
-  </StyledDiv>
-*/
-
-
-/*
-width: 5%;
-height: 10%;
 
 about: learn more about me!
 projects: look at my work

@@ -4,15 +4,14 @@ import styled from 'styled-components';
 import {
 	toggleMenu
 } from '../../actions'
-import {
-  MenuButton,
-  MenuTag,
-  MenuTitle,
-  Portrait,
-  UpperBorder
-} from '../../components';
+import MenuButton from './MenuButton.jsx';
+import MenuTag from './MenuTag.jsx'
+import MenuTitle from './MenuTitle.jsx'
+import Portrait from './Portrait.jsx'
+import UpperBorder from './UpperBorder.jsx'
 
 const OuterBorder = styled.div`
+  display: none;
   align: center;
   border: 5px solid #343F94;
   border-radius: 6px 0px 6px 6px;
@@ -26,6 +25,9 @@ const OuterBorder = styled.div`
   opacity: 0.9;
   border-bottom: none;
   position: relative;
+  @media screen and (min-width: 800px) {
+    display: block;
+  }
 `;
 
 class MenuScreen extends React.Component {
@@ -40,10 +42,10 @@ class MenuScreen extends React.Component {
         <MenuTitle/>
         <div>
           <Portrait/>
-            <MenuButton route = "/about" val = "-10%" >About</MenuButton>
-            <MenuButton route = "/projects" val = "-7%" >Projects</MenuButton>
-            <MenuButton route = "/resume" val = "-15%" >Resume</MenuButton>
-            <MenuButton route = "/extras" val = "-10%" >Extras</MenuButton> 
+          <MenuButton route = "/about" val = "-10%" >About</MenuButton>
+          <MenuButton route = "/projects" val = "-7%" >Projects</MenuButton>
+          <MenuButton route = "/resume" val = "-15%" >Resume</MenuButton>
+          <MenuButton route = "/extras" val = "-10%" >Extras</MenuButton> 
         </div>
         <MenuTag/>
       </OuterBorder>
