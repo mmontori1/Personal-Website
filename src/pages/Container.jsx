@@ -1,28 +1,27 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import { Header } from '../components'
-import { withRouter } from 'react-router-dom'
-import { toggleTheme } from '../actions'
-
-const wowTheme = {
-  primary: 'orange',
-};
+import { Header } from '../components';
+import { toggleTheme } from '../actions';
+import { defaultTheme, nightTheme } from '../styles';
 
 class Container extends React.Component {
-    componentDidMount() {
-        this.props.dispatch(toggleTheme(wowTheme));
+    componentWillMount() {
+        this.props.dispatch(toggleTheme(defaultTheme));
     }
 
     render() {
-        // console.log(this.props.theme);
-        return (
-            <ThemeProvider theme={wowTheme}>
+        var { theme, children } = this.props;
+        return theme ? (
+            <ThemeProvider theme={theme}>
                 <div>
                     <Header/>
-                    {React.Children.toArray(this.props.children)}
+                    {React.Children.toArray(children)}
                 </div>
             </ThemeProvider>
+        ) : (
+            <div> Loading... </div>
         );
     }
 }
