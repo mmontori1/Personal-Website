@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import { Header } from '../components'
+import { withRouter } from 'react-router-dom'
 import { toggleTheme } from '../actions'
 
 const wowTheme = {
@@ -14,7 +15,7 @@ class Container extends React.Component {
     }
 
     render() {
-        console.log(this.props.theme);
+        // console.log(this.props.theme);
         return (
             <ThemeProvider theme={wowTheme}>
                 <div>
@@ -33,4 +34,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(Container)
+export default withRouter(connect(mapStateToProps)(Container))
