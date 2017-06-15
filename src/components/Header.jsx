@@ -3,16 +3,21 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 
 const NavBar = styled.ul`
-	list-style-type: none;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    list-style-type: none;
     background-color: #222;
     text-align: right;
-    position: relative;
-    margin: -8px;
-    margin-top: 0px;
+    height: auto;
+    z-index: 1000;
 `;
 
 const StyledLink = styled(Link)`
-	display: none;
+	display: inline-block;
 	font-family: sans-serif;
     color: aliceblue;
     text-align: center;
@@ -23,35 +28,18 @@ const StyledLink = styled(Link)`
     	text-decoration: underline;
       	box-shadow: inset 0 0 4px #000000;
 	}
-	@media screen and (min-width: 600px) {
-	  display: inline-block;
-	}
-`;
-
-const StyledBurger = styled.div`
-	display: inline-block;
-	font-family: sans-serif;
-    color: aliceblue;
-    text-align: center;
-    padding: 12px 16px;
-    text-decoration: none;
-    width: 50px; 
-	@media screen and (min-width: 600px) {
-	  display: none;
-	}
 `;
 
 export default class Header extends React.Component {
 	render(){
 		return (
-				<NavBar>
-					<StyledLink to="/">Home</StyledLink>
-					<StyledLink to="/about">About</StyledLink>
-					<StyledLink to="/projects">Projects</StyledLink>
-					<StyledLink to="/resume">Resume</StyledLink>
-					<StyledLink to="/extras">Extras</StyledLink>
-					<StyledBurger>Bembos</StyledBurger>
-				</NavBar>
+					<NavBar>
+						<StyledLink to="/">Home</StyledLink>
+						<StyledLink to="/about">About</StyledLink>
+						<StyledLink to="/projects">Projects</StyledLink>
+						<StyledLink to="/resume">Resume</StyledLink>
+						<StyledLink to="/extras">Extras</StyledLink>
+					</NavBar>
 		)
 	}
 }

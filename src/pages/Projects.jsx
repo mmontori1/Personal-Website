@@ -5,7 +5,7 @@ import {
 	toggleMenu
 } from '../actions'
 import {
-  Header,
+  PageContainer,
   WIP
 } from '../components';
 
@@ -29,11 +29,10 @@ class Projects extends React.Component {
 
 	render(){
 		return (
-        <div>
-          <Header/>
+        <PageContainer>
           <WIP menu = {this.props.menu}/>
           <WIP menu = {this.props.menu}/>
-        </div>
+        </PageContainer>
 		)
 	}
 }
