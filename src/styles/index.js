@@ -1,4 +1,6 @@
-import devices from './devices.js';
 import './global_styles.js';
+import devices from './devices.js';
 
-export { devices };
+import { defaultTheme } from './theme.js';
+
+export { devices, defaultTheme };

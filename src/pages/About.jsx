@@ -1,9 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import {
-	toggleMenu
-} from '../actions'
+import { toggleMenu } from '../actions';
 import {
   PageContainer,
   WIP

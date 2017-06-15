@@ -5,8 +5,9 @@ import MenuButton from './MenuButton.jsx';
 import MenuTitle from './MenuTitle.jsx';
 
 const Container = styled.div`
-  padding:0;
-  top:0;
+  padding: 0;
+  padding-top: 50px;
+  top: 0;
   width: 100%;
   height: 100%;
   margin-top: 120px;

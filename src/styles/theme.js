@@ -1,0 +1,3 @@
+const defaultTheme = {
+    primary: 'orange',
+};

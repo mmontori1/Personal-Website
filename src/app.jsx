@@ -13,8 +13,6 @@ import{
 	Extras
 } from './pages';
 
-import { devices } from './styles';
-
 const app = document.getElementById('app');
 const favicon = require('../static/favicon.ico');
 

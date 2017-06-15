@@ -1,15 +1,22 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import { Header } from '../components'
+import { toggleTheme } from '../actions'
 
-const blueTheme = {
-  primary: 'blue',
+const wowTheme = {
+  primary: 'orange',
 };
 
-export default class Container extends React.Component {
+class Container extends React.Component {
+    componentDidMount() {
+        this.props.dispatch(toggleTheme(wowTheme));
+    }
+
     render() {
+        console.log(this.props.theme);
         return (
-            <ThemeProvider theme={blueTheme}>
+            <ThemeProvider theme={wowTheme}>
                 <div>
                     <Header/>
                     {React.Children.toArray(this.props.children)}
@@ -18,3 +25,12 @@ export default class Container extends React.Component {
         );
     }
 }
+
+function mapStateToProps(state) {
+    var { theme } = state.theme;
+    return{
+        theme
+    }
+}
+
+export default connect(mapStateToProps)(Container)
