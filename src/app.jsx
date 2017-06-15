@@ -20,7 +20,7 @@ render(
 	<Provider store = {store}>
 	    <ConnectedRouter history = {history}>
 			<Container>
-				<Route exact path = "/" component = {About}/>
+				<Route exact path = "/" component = {Extras}/>
 				<Route path = "/about" component = {About}/>
 				<Route path = "/projects" component = {Projects}/>
 				<Route path = "/resume" component = {Resume}/>
