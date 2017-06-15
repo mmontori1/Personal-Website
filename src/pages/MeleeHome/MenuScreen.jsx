@@ -1,14 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import {
-	toggleMenu
-} from '../../actions'
+import { toggleMenu } from '../../actions'
 import MenuButton from './MenuButton.jsx';
-import MenuTag from './MenuTag.jsx'
-import MenuTitle from './MenuTitle.jsx'
-import Portrait from './Portrait.jsx'
-import UpperBorder from './UpperBorder.jsx'
+import MenuTag from './MenuTag.jsx';
+import MenuTitle from './MenuTitle.jsx';
+import Portrait from './Portrait.jsx';
+import UpperBorder from './UpperBorder.jsx';
 
 const OuterBorder = styled.div`
   display: none;

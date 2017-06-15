@@ -4,7 +4,7 @@ import styled, { keyframes } from 'styled-components';
 const GridMove = keyframes`
   0% {background-position: 0% 0%}
   100% {background-position: 100% 100%}
-`
+`;
 
 const GridLayout = styled.div`
   position: fixed;
