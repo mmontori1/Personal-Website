@@ -1,14 +1,15 @@
 const defaultTheme = {
 	name: 'defaultTheme',
-	primary: '#222',
+	primary: '#373A47',
 	lightPrimary: '#444',
 	secondary: 'WhiteSmoke',
-	black: 'black'
 };
 
-const nightTheme = {
-	name: 'nightTheme',
-	primary: 'gray',
+const steelTheme = {
+	name: 'steelTheme',
+	primary: '#778899',
+	lightPrimary: '#B0C4DE',
+	secondary: '#F0FFF0',
 }
 
-export { defaultTheme, nightTheme }
+export { defaultTheme, steelTheme }

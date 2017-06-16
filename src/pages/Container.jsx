@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 import { Header } from '../components';
 import { toggleTheme } from '../actions';
-import { defaultTheme, nightTheme } from '../styles';
+import { defaultTheme, steelTheme } from '../styles';
 
 const Styles = styled.div`
     position: fixed; 
