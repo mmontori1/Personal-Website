@@ -24,7 +24,7 @@ class Container extends React.Component {
     render() {
         var { theme, children } = this.props;
         return theme ? (
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme = {theme}>
                 <Styles>
                     <Header/>
                     {React.Children.toArray(children)}

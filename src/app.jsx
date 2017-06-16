@@ -10,7 +10,8 @@ import{
 	About,
 	Projects,
 	Resume,
-	Extras
+	Extras,
+	MeleeHome
 } from './pages';
 
 const app = document.getElementById('app');
