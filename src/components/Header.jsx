@@ -10,30 +10,43 @@ const NavBar = styled.ul`
     right: 0;
     padding: 0;
     list-style-type: none;
-    background-color: #222;
+    background-color: ${props => props.theme.primary};
     text-align: right;
-    height: auto;
     z-index: 1000;
 `;
 
 const StyledLink = styled(Link)`
 	display: inline-block;
 	font-family: sans-serif;
-    color: aliceblue;
+    color: ${props => props.theme.secondary};
     text-align: center;
-    padding: 12px 16px;
+    padding: 24px 16px;
     text-decoration: none;
     &:hover {
-	    background-color: #444;
-    	text-decoration: underline;
-      	box-shadow: inset 0 0 4px #000000;
+	    background-color: ${props => props.theme.lightPrimary};
+      	box-shadow: inset 0 -4px 0 ${props => props.theme.secondary};
 	}
+`;
+
+const Initials = styled.div`
+    position: fixed;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: 66px;
+    width: 120px;
+    line-height: 66px;
+    text-align: center;
+    font-size: 40px;
+    box-shadow: inset 0 -2px 0 ${props => props.theme.primary};
+    background: ${props => props.theme.secondary};
 `;
 
 export default class Header extends React.Component {
 	render(){
 		return (
     		<NavBar>
+                <Initials>MM</Initials>
     			<StyledLink to="/">Home</StyledLink>
     			<StyledLink to="/about">About</StyledLink>
     			<StyledLink to="/projects">Projects</StyledLink>

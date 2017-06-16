@@ -1,6 +1,9 @@
 const defaultTheme = {
 	name: 'defaultTheme',
-	primary: 'orange',
+	primary: '#222',
+	lightPrimary: '#444',
+	secondary: 'WhiteSmoke',
+	black: 'black'
 };
 
 const nightTheme = {
