@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { toggleMenu, toggleTheme } from '../actions';
 import { PageContainer, WIP } from '../components';
-import { defaultTheme, nightTheme } from '../styles';
+import { defaultTheme, steelTheme } from '../styles';
 
 /*
 Content to add:
@@ -26,7 +26,7 @@ class Extras extends React.Component {
 
   handleTheme(){
     if(this.props.theme.name == 'defaultTheme'){
-      this.props.dispatch(toggleTheme(nightTheme));
+      this.props.dispatch(toggleTheme(steelTheme));
     }
     else{
       this.props.dispatch(toggleTheme(defaultTheme));

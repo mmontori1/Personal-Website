@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 const StyledDiv = styled.div`
   position: relative;
-  padding-top: 40px;
+  padding-top: 80px;
+  width: 100%;
 `;
 
 export default class PageContainer extends React.Component {
