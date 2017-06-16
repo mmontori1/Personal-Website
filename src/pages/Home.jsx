@@ -13,7 +13,7 @@ const PicWrapper = styled.div`
 
 const NameTitle = styled.h1`
 	position: relative;	
-	margin: -20px;
+	margin: -5px;
 	text-align: center;
 	font-size: 8vw;
 	font-weight: 300;
@@ -21,7 +21,7 @@ const NameTitle = styled.h1`
 	line-height: 90px;
 	color: ${props => props.theme.primary};
 	${devices.small`
-        margin: -10px;
+        margin: 0;
     `}
 	${devices.tablet`
         margin: 20px;
@@ -29,19 +29,32 @@ const NameTitle = styled.h1`
 `;
 
 const Subtitle = styled.div`
-	margin: -20px;
+	margin: -5px;
 	text-align: center;
 	font-size: 3.5vw;
 	font-weight: 100;
 	height: 40px;
 	line-height: 40px;
 	${devices.small`
-        margin: -10px;
+        margin: 0;
     `}
 	${devices.tablet`
         margin: 20px;
     `}
 `;
+
+const Dots = styled.div`
+    margin: auto;
+	margin-top: -30px;
+	border-top: 1px dotted ${props => props.theme.lightPrimary};
+	width: 70%;
+	${devices.small`
+        margin-top: -20px;
+    `}
+	${devices.tablet`
+        margin-top: 0;
+    `}
+`
 
 class Home extends React.Component {
 	componentDidMount() {
@@ -58,6 +71,7 @@ class Home extends React.Component {
 					</PicWrapper>
 					<NameTitle> 
 						Mariano Montori 
+						<Dots/>
 						<Subtitle> web developer </Subtitle>
 					</NameTitle>
 				</PageContainer>
