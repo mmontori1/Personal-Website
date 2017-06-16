@@ -1,13 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import {
-	toggleMenu
-} from '../actions'
-import {
-  PageContainer,
-  WIP
-} from '../components';
+import { toggleMenu, toggleTheme } from '../actions';
+import { PageContainer, WIP } from '../components';
+import { defaultTheme, nightTheme } from '../styles';
 
 /*
 Content to add:
@@ -17,9 +13,23 @@ Content to add:
 */
 
 class Extras extends React.Component {
+  constructor(){
+    super();
+    this.handleTheme = this.handleTheme.bind(this);
+  }
+
   componentDidMount() {
     if(this.props.menu){
       this.props.dispatch(toggleMenu(false));
+    }
+  }
+
+  handleTheme(){
+    if(this.props.theme.name == 'defaultTheme'){
+      this.props.dispatch(toggleTheme(nightTheme));
+    }
+    else{
+      this.props.dispatch(toggleTheme(defaultTheme));
     }
   }
 
@@ -30,6 +40,7 @@ class Extras extends React.Component {
           <WIP menu = {this.props.menu}/>
           <WIP menu = {this.props.menu}/>
           <WIP menu = {this.props.menu}/>
+          <button onClick = {this.handleTheme}> theme! </button>
         </PageContainer>
 		)
 	}
@@ -37,8 +48,10 @@ class Extras extends React.Component {
 
 function mapStateToProps(state) {
     var { menu } = state.menu;
+    var { theme } = state.theme;
     return{
-    	menu
+    	menu,
+      theme
     }
 }
 

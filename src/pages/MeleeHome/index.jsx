@@ -1,9 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import {
-	toggleMenu
-} from '../../actions';
+import { toggleMenu } from '../../actions';
 import MenuScreen from './MenuScreen.jsx';
 import MenuScreenMobile from './MenuScreenMobile.jsx';
 import Grid from './Grid.jsx';

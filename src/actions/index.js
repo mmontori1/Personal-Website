@@ -1,5 +1,7 @@
-import toggleMenu from './menu.js'
+import toggleMenu from './menu.js';
+import toggleTheme from './theme.js';
 
 export{
-	toggleMenu
+	toggleMenu,
+	toggleTheme
 }
