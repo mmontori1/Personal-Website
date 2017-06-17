@@ -130,40 +130,40 @@ export default class Header extends React.Component {
 				</NavBar>
 				<MobileNav>
 					<Initials>MM</Initials>
-						<Burger>
-							<Menu right styles = {hide}>
-								<StyledLink to="/">
-									<IconWrapper>
-										<Icon>&#xe88a;</Icon>
-									</IconWrapper>
-									Home
-								</StyledLink>
-								<StyledLink to="/about">
-									<IconWrapper>
-										<Icon>&#xe7fd;</Icon>
-									</IconWrapper>
-									About
-								</StyledLink>
-								<StyledLink to="/projects">
-									<IconWrapper>
-										<Icon>&#xe1b1;</Icon>
-									</IconWrapper>
-									Projects
-								</StyledLink>
-								<StyledLink to="/resume">
-									<IconWrapper>
-										<Icon>&#xe873;</Icon>
-									</IconWrapper>
-									Resume
-								</StyledLink>
-								<StyledLink to="/extras">
-									<IconWrapper>
-										<Icon>&#xe24e;</Icon>
-									</IconWrapper>
-									Extras
-								</StyledLink>
-							</Menu>
-						</Burger>
+					<Burger>
+						<Menu right styles = {hide}>
+							<StyledLink to="/">
+								<IconWrapper>
+									<Icon>&#xe88a;</Icon>
+								</IconWrapper>
+								Home
+							</StyledLink>
+							<StyledLink to="/about">
+								<IconWrapper>
+									<Icon>&#xe7fd;</Icon>
+								</IconWrapper>
+								About
+							</StyledLink>
+							<StyledLink to="/projects">
+								<IconWrapper>
+									<Icon>&#xe1b1;</Icon>
+								</IconWrapper>
+								Projects
+							</StyledLink>
+							<StyledLink to="/resume">
+								<IconWrapper>
+									<Icon>&#xe873;</Icon>
+								</IconWrapper>
+								Resume
+							</StyledLink>
+							<StyledLink to="/extras">
+								<IconWrapper>
+									<Icon>&#xe24e;</Icon>
+								</IconWrapper>
+								Extras
+							</StyledLink>
+						</Menu>
+					</Burger>
 				</MobileNav>
 			</div>
 		)

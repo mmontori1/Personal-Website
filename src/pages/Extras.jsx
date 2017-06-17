@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { toggleMenu, toggleTheme } from '../actions';
-import { PageContainer, WIP } from '../components';
+import { PageContainer, Section, WIP } from '../components';
 import { defaultTheme, steelTheme } from '../styles';
 
 /*
@@ -36,11 +36,10 @@ class Extras extends React.Component {
 	render(){
 		return (
         <PageContainer>
-          <WIP menu = {this.props.menu}/>
-          <WIP menu = {this.props.menu}/>
-          <WIP menu = {this.props.menu}/>
-          <WIP menu = {this.props.menu}/>
-          <button onClick = {this.handleTheme}> theme! </button>
+          <Section title = "EXTRAS">
+            <WIP menu = {this.props.menu}/>
+            <button onClick = {this.handleTheme}> theme! </button>
+          </Section>
         </PageContainer>
 		)
 	}

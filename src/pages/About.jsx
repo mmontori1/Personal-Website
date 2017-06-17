@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { toggleMenu } from '../actions';
-import { PageContainer, WIP } from '../components';
+import { PageContainer, Section } from '../components';
 
 /*
 Content to add:
@@ -28,6 +28,16 @@ Content to add:
     -LinkedIn
 */
 
+const StyledParagraph = styled.p`
+  margin: auto;
+  border-style: solid;
+  border-width: 2px 5px 2px 5px;
+  border-radius: 3px;
+  text-align: left;
+  font-size: 20px;
+  padding: 20px;
+`;
+
 class About extends React.Component {
   componentDidMount() {
     if(this.props.menu){
@@ -38,7 +48,12 @@ class About extends React.Component {
 	render(){
 		return (
         <PageContainer>
-  				<WIP menu = {this.props.menu}/>
+          <Section title = "ABOUT">
+            <StyledParagraph> 
+                Hey! I'm Mariano Montori, a junior at the University of Michigan majoring in Computer Science. 
+                I
+            </StyledParagraph>
+          </Section>
         </PageContainer>
 		)
 	}

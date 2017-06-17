@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { toggleMenu } from '../actions';
-import { PageContainer, WIP } from '../components';
+import { PageContainer, Section, WIP } from '../components';
 
 /*
 Content to add:
@@ -25,8 +25,9 @@ class Projects extends React.Component {
 	render(){
 		return (
         <PageContainer>
-          <WIP menu = {this.props.menu}/>
-          <WIP menu = {this.props.menu}/>
+          <Section title = "PROJECTS">
+            <WIP menu = {this.props.menu}/>
+          </Section>
         </PageContainer>
 		)
 	}
