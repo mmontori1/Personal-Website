@@ -30,7 +30,7 @@ const goBlueTheme = {
 	name: 'Go Blue theme',
 	primary: '#0000CD',
 	lightPrimary: '#2424FF',
-	secondary: '#FFFF00',
+	secondary: '#FFED66',
 };
 
 export { defaultTheme, steelTheme, colorfulTheme, seaGreenTheme, goBlueTheme }

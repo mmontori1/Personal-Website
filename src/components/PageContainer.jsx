@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledDiv = styled.div`
+const Wrapper = styled.div`
   position: relative;
   padding-top: 80px;
   width: 100%;
@@ -10,9 +10,9 @@ const StyledDiv = styled.div`
 export default class PageContainer extends React.Component {
 	render(){
 		return (
-  			<StyledDiv>
+  			<Wrapper>
   				{this.props.children}
-  			</StyledDiv>
+  			</Wrapper>
 		)
 	}
 }
