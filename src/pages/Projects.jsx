@@ -27,6 +27,40 @@ class Projects extends React.Component {
         <PageContainer>
           <Section title = "PROJECTS">
             <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
+            <WIP menu = {this.props.menu}/>
           </Section>
         </PageContainer>
 		)
