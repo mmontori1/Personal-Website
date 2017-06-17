@@ -42,15 +42,19 @@ const DescriptionWrapper = styled.div`
 `;
 
 const StyledButton = styled.div`
+  display: block;
   margin-top: 5px;
   margin-bottom: 5px;
-  display: block;
+  font-size: 12px;
   cursor: pointer;
   border: 2px solid ${props => props.theme.primary};
   border-radius: 3px;
   &:first-child {
     margin-top: 0;
   }
+  ${devices.tablet`
+    font-size: 20px;
+  `}
 `;
 
 const Description = styled.p`
