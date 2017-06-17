@@ -51,7 +51,6 @@ class About extends React.Component {
           <Section title = "ABOUT">
             <StyledParagraph> 
                 Hey! I'm Mariano Montori, a junior at the University of Michigan majoring in Computer Science. 
-                I
             </StyledParagraph>
           </Section>
         </PageContainer>

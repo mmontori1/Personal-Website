@@ -8,11 +8,15 @@ const Wrapper = styled.div`
   width: 80%;
 `;
 
+const SectionTitle = styled.h1`
+  box-shadow: 0 2px 0 ${props => props.theme.primary};
+`;
+
 export default class Section extends React.Component {
 	render(){
 		return (
   		<Wrapper>
-        <h1> {this.props.title} </h1>
+        <SectionTitle> {this.props.title} </SectionTitle>
   				{this.props.children}
   		</Wrapper>
 		)

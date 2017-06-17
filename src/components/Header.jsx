@@ -126,7 +126,7 @@ export default class Header extends React.Component {
 					<StyledLink to="/about"><Icon>&#xe7fd;</Icon> About</StyledLink>
 					<StyledLink to="/projects"><Icon>&#xe1b1;</Icon> Projects</StyledLink>
 					<StyledLink to="/resume"><Icon>&#xe873;</Icon> Resume</StyledLink>
-					<StyledLink to="/extras"><Icon>&#xe24e;</Icon> Extras</StyledLink>
+					<StyledLink to="/extras"><Icon>&#xE7F2;</Icon> Extras</StyledLink>
 				</NavBar>
 				<MobileNav>
 					<Initials>MM</Initials>
@@ -158,7 +158,7 @@ export default class Header extends React.Component {
 							</StyledLink>
 							<StyledLink to="/extras">
 								<IconWrapper>
-									<Icon>&#xe24e;</Icon>
+									<Icon>&#xE7F2;</Icon>
 								</IconWrapper>
 								Extras
 							</StyledLink>
