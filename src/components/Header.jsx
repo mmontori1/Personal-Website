@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { slide as Menu } from 'react-burger-menu'
+import { stack as Menu } from 'react-burger-menu'
 import { devices } from '../styles';
 
 const NavBar = styled.ul`
@@ -30,15 +30,19 @@ const MobileNav = styled.div`
 
 const StyledLink = styled(Link)`
 	display: inline-block;
-	font-family: sans-serif;
 	color: ${props => props.theme.secondary};
-	text-align: center;
-	padding: 24px 16px;
+	padding: 22px 16px;
+	text-align: left;
 	text-decoration: none;
 	&:hover {
 		background-color: ${props => props.theme.lightPrimary};
-		box-shadow: inset 0 -4px 0 ${props => props.theme.secondary};
 	}
+	${devices.tablet`
+		text-align: center;
+		&:hover {
+			box-shadow: inset 0 -4px 0 ${props => props.theme.secondary};
+		}
+	`}
 `;
 
 const Initials = styled.div`
@@ -98,27 +102,66 @@ const Burger = styled.div`
 	}
 `;
 
+const IconWrapper = styled.div`
+	display: inline-block;
+	width: 40%;
+`;
+
+const Icon = styled.i`
+	display: inline-flex;
+    vertical-align: middle;
+	font-family: Material Icons;
+	font-style: normal;
+	font-weight: 100;
+	padding-bottom: 2.5px;
+`;
+
 export default class Header extends React.Component {
 	render(){
 		return (
 			<div>
 				<NavBar>
 					<Initials>MM</Initials>
-					<StyledLink to="/">Home</StyledLink>
-					<StyledLink to="/about">About</StyledLink>
-					<StyledLink to="/projects">Projects</StyledLink>
-					<StyledLink to="/resume">Resume</StyledLink>
-					<StyledLink to="/extras">Extras</StyledLink>
+					<StyledLink to="/"><Icon>&#xe88a;</Icon> Home</StyledLink>
+					<StyledLink to="/about"><Icon>&#xe7fd;</Icon> About</StyledLink>
+					<StyledLink to="/projects"><Icon>&#xe1b1;</Icon> Projects</StyledLink>
+					<StyledLink to="/resume"><Icon>&#xe873;</Icon> Resume</StyledLink>
+					<StyledLink to="/extras"><Icon>&#xe24e;</Icon> Extras</StyledLink>
 				</NavBar>
 				<MobileNav>
 					<Initials>MM</Initials>
 						<Burger>
 							<Menu right styles = {hide}>
-								<StyledLink to="/">Home</StyledLink>
-								<StyledLink to="/about">About</StyledLink>
-								<StyledLink to="/projects">Projects</StyledLink>
-								<StyledLink to="/resume">Resume</StyledLink>
-								<StyledLink to="/extras">Extras</StyledLink>
+								<StyledLink to="/">
+									<IconWrapper>
+										<Icon>&#xe88a;</Icon>
+									</IconWrapper>
+									Home
+								</StyledLink>
+								<StyledLink to="/about">
+									<IconWrapper>
+										<Icon>&#xe7fd;</Icon>
+									</IconWrapper>
+									About
+								</StyledLink>
+								<StyledLink to="/projects">
+									<IconWrapper>
+										<Icon>&#xe1b1;</Icon>
+									</IconWrapper>
+									Projects
+								</StyledLink>
+								<StyledLink to="/resume">
+									<IconWrapper>
+										<Icon>&#xe873;</Icon>
+									</IconWrapper>
+									Resume
+								</StyledLink>
+								<StyledLink to="/extras">
+									<IconWrapper>
+										<Icon>&#xe24e;</Icon>
+									</IconWrapper>
+									Extras
+								</StyledLink>
 							</Menu>
 						</Burger>
 				</MobileNav>
