@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   display: -ms-flex;
   display: -webkit-flex;
   display: flex;
-  margin-right: 10px;
+  margin-right: 20px;
   padding: 20px;
   text-align: left;
   -ms-flex-align: center;

@@ -14,7 +14,18 @@ const SectionTitle = styled.h1`
 const Scroller = styled.div`
   height: 500px;
   overflow: auto;
-
+  ::-webkit-scrollbar{ 
+    width: 13px; 
+  }
+  ::-webkit-scrollbar-thumb{ 
+    background-color: ${props => props.theme.primary}; 
+  }
+  ::-webkit-scrollbar-track{ 
+    background-color: ${props => props.theme.secondary}; 
+  } 
+  ::-webkit-scrollbar-track:hover{ 
+    background-color: #CCC; 
+  } 
 `
 
 export default class Section extends React.Component {
@@ -22,7 +33,9 @@ export default class Section extends React.Component {
 		return (
   		<Wrapper>
         <SectionTitle> {this.props.title} </SectionTitle>
-  			<Scroller> {this.props.children} </Scroller>
+  			<Scroller>
+            {this.props.children}
+        </Scroller>
   		</Wrapper>
 		)
 	}
