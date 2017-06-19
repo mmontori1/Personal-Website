@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   margin: auto;
-  color: ${props => props.theme.primary};
   width: 80%;
+  color: ${props => props.theme.primary};
 `;
 
 const SectionTitle = styled.h1`
@@ -12,8 +12,9 @@ const SectionTitle = styled.h1`
 `;
 
 const Scroller = styled.div`
-  overflow: auto;
   height: 500px;
+  overflow: auto;
+
 `
 
 export default class Section extends React.Component {

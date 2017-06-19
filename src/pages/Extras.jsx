@@ -1,16 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { MeleeHome } from '../pages';
 import { toggleMenu, toggleTheme } from '../actions';
 import { ContentBox, PageContainer, Section, WIP } from '../components';
 import { devices, defaultTheme, steelTheme, colorfulTheme, seaGreenTheme, goBlueTheme } from '../styles';
-
-/*
-Content to add:
-  -Extra cool stuff that I like
-    -Melee stuff
-    -TBD
-*/
 
 const ButtonWrapper = styled.div`
   display: inline-block;
@@ -34,6 +29,24 @@ const StyledButton = styled.div`
   margin-bottom: 5px;
   font-size: 12px;
   cursor: pointer;
+  border: 2px solid ${props => props.theme.primary};
+  border-radius: 3px;
+  &:first-child {
+    margin-top: 0;
+  }
+  ${devices.tablet`
+    font-size: 20px;
+  `}
+`;
+
+const StyledLink = styled(Link)`
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  color: ${props => props.theme.primary};
+  text-decoration: none;
   border: 2px solid ${props => props.theme.primary};
   border-radius: 3px;
   &:first-child {
@@ -82,7 +95,9 @@ class Extras extends React.Component {
                 <StyledButton onClick = {() => this.handleTheme(goBlueTheme)}> {goBlueTheme.name}! </StyledButton>
               </ButtonWrapper>
               <DescriptionWrapper>
-                <Description> You can pick one out of the five themes for the site! </Description>
+                <Description> 
+                  You can pick one out of the five themes for the site!
+                </Description>
               </DescriptionWrapper>
             </ContentBox>
           </Section>
@@ -90,6 +105,20 @@ class Extras extends React.Component {
 		)
 	}
 }
+
+/*
+<ContentBox title = "Melee themed menu">
+  <ButtonWrapper>
+    <StyledLink to="/extras/melee"> Melee Homepage </StyledLink>
+  </ButtonWrapper>
+  <DescriptionWrapper>
+    <Description>
+      This home page is inspired after the home screen menu from Super Smash Bros. Melee.
+      I was going to use this as my home page for this site, but I decided to scrap it later on.
+    </Description>
+  </DescriptionWrapper>
+</ContentBox>
+*/
 
 function mapStateToProps(state) {
     var { menu } = state.menu;

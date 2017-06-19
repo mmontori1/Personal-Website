@@ -13,7 +13,7 @@ const Photo = styled.img`
 	box-shadow: 0 0 20px ${props => props.theme.lightPrimary};
 `;
 
-const pic = require('../../static/portrait.jpg');
+const pic = require('../../static/portraits/portrait.jpg');
 
 export default class Portrait extends React.Component {
 	render(){

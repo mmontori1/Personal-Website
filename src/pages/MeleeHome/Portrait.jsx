@@ -15,12 +15,12 @@ const Photo = styled.img`
   }
 `;
 
-const pic = require('../../../static/portrait.jpg');
+const picture = require('../../../static/portraits/portrait-old.jpg');
 
 export default class Portrait extends React.Component {
   render(){
     return (
-      <Photo src = {pic}/>
+      <Photo src = {picture}/>
     )
   }
 }
