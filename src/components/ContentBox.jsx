@@ -5,6 +5,10 @@ const Wrapper = styled.div`
   display: -ms-flex;
   display: -webkit-flex;
   display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
   border-style: solid;
   border-width: 2px 5px 2px 5px;
   border-radius: 3px;

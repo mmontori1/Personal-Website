@@ -18,12 +18,10 @@ const ButtonWrapper = styled.div`
   padding: 10px;
   padding-top: 0;
   text-align: center;
-  border-bottom: 2px solid ${props => props.theme.primary};
 `;
 
 const DescriptionWrapper = styled.div`
   display: inline-block;
-  border-bottom: 2px solid ${props => props.theme.primary};
   width: 65%;
   text-align: center;
   padding: 10px;
