@@ -4,10 +4,12 @@ import styled from 'styled-components';
 import { toggleMenu } from '../actions';
 import { PageContainer, Section, WIP } from '../components';
 
-/*
-Content to add:
-  -Display resume PDF
-*/
+const resume = require('../../static/resume.pdf');
+
+const ResumeFile = styled.object`
+  width: 100%; 
+  height: 490px;
+`;
 
 class Resume extends React.Component {
   componentDidMount() {
@@ -20,7 +22,7 @@ class Resume extends React.Component {
 		return (
         <PageContainer>
           <Section title = "RESUME">
-            <WIP menu = {this.props.menu}/>
+            <ResumeFile data = {resume} type="application/pdf"/>
           </Section>
         </PageContainer>
 		)

@@ -75,7 +75,7 @@ class About extends React.Component {
                     <div>-&nbsp;2016-2017 Core Team Member </div>
                   </ClubBox>
                   <ClubBox title = "Society of Hispanic Professional Engineers" image = {shpeLogo}>
-                    <div>-&nbsp;2017-2018 Club Member </div>
+                    <div>-&nbsp;2017-2018 Member </div>
                     <div>-&nbsp;2016-2017 LeaderSHPE Team Member </div>
                   </ClubBox>
                 </FlexBox>

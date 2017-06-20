@@ -26,7 +26,7 @@ module.exports = {
 				loaders: ['react-hot-loader', 'babel-loader?presets[]=react,presets[]=es2015']
 			},
 	      	{
-	        	test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
+	        	test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$|\.pdf$/,
 	         	loader: "file-loader?name=[name].[ext]"
 	      	}
 		]

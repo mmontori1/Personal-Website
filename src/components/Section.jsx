@@ -15,7 +15,7 @@ const Scroller = styled.div`
   height: 500px;
   overflow: auto;
   ::-webkit-scrollbar{ 
-    width: 13px; 
+    width: 12px; 
   }
   ::-webkit-scrollbar-thumb{ 
     background-color: ${props => props.theme.primary}; 
