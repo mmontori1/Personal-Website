@@ -27,6 +27,7 @@ Content to add:
     -Facebook
     -Github
     -LinkedIn
+    -Devpost
 */
 
 const hackersLogo = require('../../static/logos/hackers_logo.jpg');
@@ -80,10 +81,6 @@ class About extends React.Component {
                   </ClubBox>
                 </FlexBox>
               </div>
-            </ContentBox>
-            <ContentBox title = "Contact Me">
-              <p>
-              </p>
             </ContentBox>
           </Section>
         </PageContainer>

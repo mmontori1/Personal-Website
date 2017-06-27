@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
-import { Header } from '../components';
+import { Header, Footer } from '../components';
 import { toggleTheme } from '../actions';
-import { defaultTheme, steelTheme } from '../styles';
+import { defaultTheme } from '../styles';
 
 const Styles = styled.div`
     position: fixed; 
@@ -28,10 +28,11 @@ class Container extends React.Component {
                 <Styles>
                     <Header/>
                     {React.Children.toArray(children)}
+                    <Footer/>
                 </Styles>
             </ThemeProvider>
         ) : (
-            <div> Loading... </div>
+            <div> Error :( </div>
         );
     }
 }

@@ -12,7 +12,7 @@ const SectionTitle = styled.h1`
 `;
 
 const Scroller = styled.div`
-  height: 500px;
+  height: 460px;
   overflow: auto;
   ::-webkit-scrollbar{ 
     width: 12px; 

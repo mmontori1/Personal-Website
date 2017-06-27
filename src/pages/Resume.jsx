@@ -7,8 +7,8 @@ import { PageContainer, Section, WIP } from '../components';
 const resume = require('../../static/resume.pdf');
 
 const ResumeFile = styled.object`
+  height: 450px;
   width: 100%; 
-  height: 490px;
 `;
 
 class Resume extends React.Component {
