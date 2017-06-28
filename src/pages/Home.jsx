@@ -21,11 +21,11 @@ const NameTitle = styled.h1`
 	line-height: 90px;
 	color: ${props => props.theme.primary};
 	${devices.small`
-        margin: 0;
-    `}
+		margin: 0;
+	`}
 	${devices.tablet`
-        margin: 20px;
-    `}
+		margin: 20px;
+	`}
 `;
 
 const Subtitle = styled.div`
@@ -36,24 +36,24 @@ const Subtitle = styled.div`
 	height: 40px;
 	line-height: 40px;
 	${devices.small`
-        margin: 0;
-    `}
+		margin: 0;
+	`}
 	${devices.tablet`
-        margin: 20px;
-    `}
+		margin: 20px;
+	`}
 `;
 
 const Dots = styled.div`
-    margin: auto;
+	margin: auto;
 	margin-top: -30px;
 	border-top: 1px dotted ${props => props.theme.lightPrimary};
 	width: 70%;
 	${devices.small`
-        margin-top: -20px;
-    `}
+		margin-top: -20px;
+	`}
 	${devices.tablet`
-        margin-top: 0;
-    `}
+		margin-top: 0;
+	`}
 `
 
 class Home extends React.Component {
@@ -65,25 +65,25 @@ class Home extends React.Component {
 
 	render(){
 		return (
-				<PageContainer>
-					<PicWrapper>
-						<Portrait/>
-					</PicWrapper>
-					<NameTitle> 
-						Mariano Montori 
-						<Dots/>
-						<Subtitle> web developer </Subtitle>
-					</NameTitle>
-				</PageContainer>
+			<PageContainer>
+				<PicWrapper>
+					<Portrait/>
+				</PicWrapper>
+				<NameTitle> 
+					Mariano Montori 
+					<Dots/>
+					<Subtitle> web developer </Subtitle>
+				</NameTitle>
+			</PageContainer>
 		)
 	}
 }
 
 function mapStateToProps(state) {
-		var { menu } = state.menu;
-		return{
-			menu
-		}
+	var { menu } = state.menu;
+	return{
+		menu
+	}
 }
 
 export default connect(mapStateToProps)(Home)

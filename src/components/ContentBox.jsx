@@ -31,7 +31,7 @@ export default class ContentBox extends React.Component {
 				<Wrapper>
 					{this.props.children}
 				</Wrapper>
-	  		</div>
+			</div>
 		)
 	}
 }

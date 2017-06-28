@@ -9,69 +9,69 @@ Content to add:
   -Paragraph talking about 
   -Link to my github to display other work
   -TBD, with more projects
-    -Project components which have:
-      -Name/Title
-      -Picture
-      -Little desc. about the project
+	-Project components which have:
+	  -Name/Title
+	  -Picture
+	  -Little desc. about the project
 */
 
 class Projects extends React.Component {
   componentDidMount() {
-    if(this.props.menu){
-      this.props.dispatch(toggleMenu(false));
-    }
+	if(this.props.menu){
+	  this.props.dispatch(toggleMenu(false));
+	}
   }
 
 	render(){
 		return (
-        <PageContainer>
-          <Section title = "PROJECTS">
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-            <WIP menu = {this.props.menu}/>
-          </Section>
-        </PageContainer>
+		<PageContainer>
+		  <Section title = "PROJECTS">
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+			<WIP menu = {this.props.menu}/>
+		  </Section>
+		</PageContainer>
 		)
 	}
 }
 
 function mapStateToProps(state) {
-    var { menu } = state.menu;
-    return{
-    	menu
-    }
+	var { menu } = state.menu;
+	return{
+		menu
+	}
 }
 
 export default connect(mapStateToProps)(Projects)
