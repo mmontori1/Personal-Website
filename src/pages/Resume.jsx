@@ -2,30 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { toggleMenu } from '../actions';
-import { PageContainer, Section, WIP } from '../components';
-import { devices } from '../styles';
+import { Button, PageContainer, Section, WIP } from '../components';
 
 const resume = require('../../static/resume.pdf');
 
 const ResumeFile = styled.object`
   height: calc(100vh - 210px);
   width: 100%; 
-`;
-
-const StyledButton = styled.div`
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 12px;
-  cursor: pointer;
-  border: 2px solid ${props => props.theme.primary};
-  border-radius: 3px;
-  &:first-child {
-    margin-top: 0;
-  }
-  ${devices.tablet`
-    font-size: 20px;
-  `}
 `;
 
 const ResumeLink = styled.a`
@@ -52,9 +35,9 @@ class Resume extends React.Component {
             <ResumeFile data = {resume} type="application/pdf">
                 Your current browser doesn't support object tags. Use this link instead:
                 <ResumeLink href = {resume} target="_blank"> 
-                  <StyledButton>
+                  <Button>
                     &nbsp;Resume Link&nbsp;
-                  </StyledButton>
+                  </Button>
                 </ResumeLink>
             </ResumeFile>
           </Section>

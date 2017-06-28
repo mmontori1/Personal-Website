@@ -1,3 +1,4 @@
+import Button from './Button.jsx';
 import ClubBox from './ClubBox.jsx';
 import ContentBox from './ContentBox.jsx';
 import Footer from './Footer.jsx';
@@ -9,6 +10,7 @@ import Section from './Section.jsx';
 import WIP from './WIP.jsx';
 
 export {
+	Button,
 	ClubBox,
 	ContentBox,
 	Footer,

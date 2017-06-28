@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { devices } from '../styles';
 
 const Wrapper = styled.div`
 	display: -ms-flex;
 	display: -webkit-flex;
 	display: flex;
-	margin-right: 20px;
+	margin-right: 5px;
 	padding: 20px;
 	text-align: left;
 	-ms-flex-align: center;
@@ -16,6 +17,9 @@ const Wrapper = styled.div`
 	border-style: solid;
 	border-width: 2px 5px 2px 5px;
 	border-radius: 3px;
+	${devices.tablet`
+		margin-right: 10px;
+	`}
 `;
 
 

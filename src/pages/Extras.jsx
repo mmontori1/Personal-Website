@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { MeleeHome } from '../pages';
 import { toggleMenu, toggleTheme } from '../actions';
-import { ContentBox, PageContainer, Section, WIP } from '../components';
+import { Button, ContentBox, PageContainer, Section, WIP } from '../components';
 import { devices, defaultTheme, steelTheme, colorfulTheme, seaGreenTheme, goBlueTheme } from '../styles';
 
 const ButtonWrapper = styled.div`
@@ -21,22 +21,6 @@ const DescriptionWrapper = styled.div`
   text-align: center;
   padding: 10px;
   padding-top: 0;
-`;
-
-const StyledButton = styled.div`
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 12px;
-  cursor: pointer;
-  border: 2px solid ${props => props.theme.primary};
-  border-radius: 3px;
-  &:first-child {
-    margin-top: 0;
-  }
-  ${devices.tablet`
-    font-size: 20px;
-  `}
 `;
 
 const StyledLink = styled(Link)`
@@ -88,11 +72,21 @@ class Extras extends React.Component {
           <Section title = "EXTRAS">
             <ContentBox title = "Pick a theme!">
               <ButtonWrapper>
-                <StyledButton onClick = {() => this.handleTheme(defaultTheme)}> {defaultTheme.name}! </StyledButton>
-                <StyledButton onClick = {() => this.handleTheme(steelTheme)}> {steelTheme.name}! </StyledButton>
-                <StyledButton onClick = {() => this.handleTheme(colorfulTheme)}> {colorfulTheme.name}! </StyledButton>
-                <StyledButton onClick = {() => this.handleTheme(seaGreenTheme)}> {seaGreenTheme.name}! </StyledButton>
-                <StyledButton onClick = {() => this.handleTheme(goBlueTheme)}> {goBlueTheme.name}! </StyledButton>
+                <div onClick = {() => this.handleTheme(defaultTheme)}>
+                  <Button > {defaultTheme.name}! </Button>
+                </div>
+                <div onClick = {() => this.handleTheme(steelTheme)}>
+                  <Button> {steelTheme.name}! </Button>
+                </div>
+                <div onClick = {() => this.handleTheme(colorfulTheme)}>
+                  <Button> {colorfulTheme.name}! </Button>
+                </div>
+                <div onClick = {() => this.handleTheme(seaGreenTheme)}>
+                  <Button> {seaGreenTheme.name}! </Button>
+                </div>
+                <div onClick = {() => this.handleTheme(goBlueTheme)}>
+                  <Button> {goBlueTheme.name}! </Button>
+                </div>
               </ButtonWrapper>
               <DescriptionWrapper>
                 <Description> 
