@@ -31,7 +31,6 @@ const Scroller = styled.div`
 
 export default class Section extends React.Component {
 	render(){
-		console.log(this.props.hide)
 		return (
 			<Wrapper>
 				<SectionTitle> {this.props.title} </SectionTitle>

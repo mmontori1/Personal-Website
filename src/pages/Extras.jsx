@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { MeleeHome } from '../pages';
 import { toggleMenu, toggleTheme } from '../actions';
 import { Button, ContentBox, PageContainer, Section, WIP } from '../components';
-import { devices, defaultTheme, steelTheme, colorfulTheme, seaGreenTheme, goBlueTheme } from '../styles';
+import { devices, defaultTheme, steelTheme, inverseTheme, seaGreenTheme, goBlueTheme } from '../styles';
 
 const ButtonWrapper = styled.div`
   display: inline-block;
@@ -78,8 +78,8 @@ class Extras extends React.Component {
                 <div onClick = {() => this.handleTheme(steelTheme)}>
                   <Button> {steelTheme.name}! </Button>
                 </div>
-                <div onClick = {() => this.handleTheme(colorfulTheme)}>
-                  <Button> {colorfulTheme.name}! </Button>
+                <div onClick = {() => this.handleTheme(inverseTheme)}>
+                  <Button> {inverseTheme.name}! </Button>
                 </div>
                 <div onClick = {() => this.handleTheme(seaGreenTheme)}>
                   <Button> {seaGreenTheme.name}! </Button>

@@ -1,7 +1,7 @@
 const defaultTheme = {
 	name: 'Default theme',
 	primary: '#373A47',
-	lightPrimary: '#444',
+	lightPrimary: '#6F7590',
 	secondary: 'WhiteSmoke',
 };
 
@@ -12,11 +12,11 @@ const steelTheme = {
 	secondary: '#F0FFF0',
 };
 
-const colorfulTheme = {
-	name: 'Colorful theme',
-	primary: '#800080',
-	lightPrimary: '#C200C2',
-	secondary: '#FFB6C1',
+const inverseTheme = {
+	name: 'Inverse theme',
+	primary: 'WhiteSmoke',
+	lightPrimary: '#C7C7C7',
+	secondary: '#373A47',
 };
 
 const seaGreenTheme = {
@@ -29,8 +29,8 @@ const seaGreenTheme = {
 const goBlueTheme = {
 	name: 'Go Blue theme',
 	primary: '#0000CD',
-	lightPrimary: '#2424FF',
+	lightPrimary: '#3333FF',
 	secondary: '#FFED66',
 };
 
-export { defaultTheme, steelTheme, colorfulTheme, seaGreenTheme, goBlueTheme }
+export { defaultTheme, steelTheme, inverseTheme, seaGreenTheme, goBlueTheme }

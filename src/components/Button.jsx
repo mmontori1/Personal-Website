@@ -13,6 +13,10 @@ const StyledButton = styled.div`
   &:first-child {
     margin-top: 0;
   }
+  &:hover {
+    color: ${props => props.theme.lightPrimary};
+    border-color: ${props => props.theme.lightPrimary};
+  }
   ${devices.tablet`
     font-size: 20px;
   `}
