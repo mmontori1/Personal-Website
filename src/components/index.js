@@ -1,6 +1,7 @@
 import ClubBox from './ClubBox.jsx';
 import ContentBox from './ContentBox.jsx';
 import Footer from './Footer.jsx';
+import FooterIcon from './FooterIcon.jsx';
 import Header from './Header.jsx';
 import PageContainer from './PageContainer.jsx';
 import Portrait from './Portrait.jsx';
