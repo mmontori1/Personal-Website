@@ -9,7 +9,7 @@ const PicWrapper = styled.div`
 	width: 50%;
 	margin: 0 auto;
 	margin-top: 30px;
-`
+`;
 
 const NameTitle = styled.h1`
 	position: relative;	
@@ -54,7 +54,7 @@ const Dots = styled.div`
 	${devices.tablet`
 		margin-top: 0;
 	`}
-`
+`;
 
 class Home extends React.Component {
 	componentDidMount() {
