@@ -55,31 +55,43 @@ class About extends React.Component {
 			<PageContainer>
 				<Section title = "ABOUT">
 					<ContentBox title = "Who am I?">
-						<p>
+						<div>
 							Hey! I'm Mariano Montori, a junior at the University of Michigan majoring in Computer Science. 
 							I come from all parts of Southern Florida, but I am originally from Peru where I spent my 
 							early childhood. I also went to high school at Phillips Exeter Academy in Exeter, New Hampshire.
 							I’m passionate about programming primarily focused on game dev, web dev, and mobile dev, but 
 							I’m always looking to learn more outside those fields as well!
-						</p>
+							<p> You can contact me and see my work through the links at the footer! </p>
+						</div>
 					</ContentBox>
 					<ContentBox title = "What do I do?">
 						<div>
-							At the University of Michigan, I’m involved in various clubs:
-							<FlexBox>
-								<ClubBox title = "Michigan Hackers" image = {hackersLogo}>
-									<div>-&nbsp;2017-2018 Vice President </div>
-									<div>-&nbsp;2016-2017 Core Team Member </div>
-								</ClubBox>
-								<ClubBox title = "MHacks" image = {mhacksLogo}>
-									<div>-&nbsp;2017-2018 Hardware Lead </div>
-									<div>-&nbsp;2016-2017 Core Team Member </div>
-								</ClubBox>
-								<ClubBox title = "Society of Hispanic Professional Engineers" image = {shpeLogo}>
-									<div>-&nbsp;2017-2018 Member </div>
-									<div>-&nbsp;2016-2017 LeaderSHPE Team Member </div>
-								</ClubBox>
-							</FlexBox>
+							<p> I love being a part of the hacking community at the University of Michigan. </p> 
+							<div>
+								<p> I’m involved in various engineering clubs on campus: </p>
+								<FlexBox>
+									<ClubBox title = "Michigan Hackers" image = {hackersLogo}>
+										<div>-&nbsp;2017-2018 Vice President </div>
+										<div>-&nbsp;2016-2017 Core Team Member </div>
+									</ClubBox>
+									<ClubBox title = "MHacks" image = {mhacksLogo}>
+										<div>-&nbsp;2017-2018 Hardware Lead </div>
+										<div>-&nbsp;2016-2017 Core Team Member </div>
+									</ClubBox>
+									<ClubBox title = "Society of Hispanic Professional Engineers" image = {shpeLogo}>
+										<div>-&nbsp;2017-2018 Member </div>
+										<div>-&nbsp;2016-2017 LeaderSHPE Team Member </div>
+									</ClubBox>
+								</FlexBox>
+							</div>
+							<div>
+								<p> I also enjoy attending hackathons with my friends and other hackers from Michigan Hackers: </p>
+								<ul>
+									<li>SpartaHack @ MSU, Jan. 20-22 2017 </li>
+									<li>HackIllinois @ UIUC, Feb. 24th-26th 2017 </li>
+									<li>MHacks Nano (Online Summer Hackathon), June 19th-24th 2017 </li>
+								</ul>
+							</div>
 						</div>
 					</ContentBox>
 				</Section>
