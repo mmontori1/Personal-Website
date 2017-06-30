@@ -1,12 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
-import { withTheme } from 'styled-components';
+import styled, { withTheme, keyframes } from 'styled-components';
 import FooterIcon from './FooterIcon.jsx';
 import { devices } from '../styles';
 import mailLogo from '../../static/logos/mail_icon.svg'
 import githubLogo from '../../static/logos/github_icon.svg';
 import linkedInLogo from '../../static/logos/linkedIn_icon.svg';
 import devpostLogo from '../../static/logos/devpost_icon.svg';
+import { tada } from 'react-animations';
+
+const pop = keyframes`${tada}`;
 
 const Wrapper = styled.div`
 	position: absolute;
@@ -26,6 +28,7 @@ const Link = styled.a`
 	margin: 5px 10px 5px;
 	color: ${props => props.theme.primary};
 	&:hover{
+		animation: 1s ${pop} normal 1 ease;
 		color: ${props => props.theme.lightPrimary};
 	}
 	${devices.small`

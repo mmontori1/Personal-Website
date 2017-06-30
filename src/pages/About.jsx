@@ -61,12 +61,12 @@ class About extends React.Component {
 							early childhood. I also went to high school at Phillips Exeter Academy in Exeter, New Hampshire.
 							I’m passionate about programming primarily focused on game dev, web dev, and mobile dev, but 
 							I’m always looking to learn more outside those fields as well!
-							<p> You can contact me and see my work through the links at the footer! </p>
+							<p> You can contact me and see my work at the bottom! </p>
 						</div>
 					</ContentBox>
 					<ContentBox title = "What do I do?">
 						<div>
-							<p> I love being a part of the hacking community at the University of Michigan. </p> 
+							<p> I love being an active member of the hacking community at the University of Michigan. </p> 
 							<div>
 								<p> I’m involved in various engineering clubs on campus: </p>
 								<FlexBox>

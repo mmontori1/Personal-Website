@@ -15,7 +15,7 @@ const NavBar = styled.ul`
 	list-style-type: none;
 	background-color: ${props => props.theme.primary};
 	text-align: right;
-	z-index: 1000;
+	z-index: 100;
 	${devices.tablet`
 		display: block;
 	`}
@@ -55,13 +55,25 @@ const Initials = styled.div`
 	width: 120px;
 	line-height: 66px;
 	text-align: center;
+	text-decoration: none;
 	font-size: 40px;
+	z-index: 200;
 	box-shadow: inset 0 -2px 0 ${props => props.theme.primary},
 				inset -2px 0 0 ${props => props.theme.primary};
 	background: ${props => props.theme.secondary};
+	&:hover{
+		color: ${props => props.theme.secondary};
+		background: ${props => props.theme.primary};
+	}
 `;
 
 var hide = {
+	bmMenuWrap: {
+		zIndex: '300',
+	},
+	bmOverlay: {
+		zIndex: '250',
+	},
 	bmMenu: {
 		overflow: 'hidden'
 	}
@@ -117,11 +129,20 @@ const Icon = styled.i`
 `;
 
 export default class Header extends React.Component {
+	constructor(){
+		super();
+		this.falcoAppears = this.falcoAppears.bind(this);
+	}
+
+	falcoAppears(){
+		console.log("FALCO")
+	}
+
 	render(){
 		return (
-			<div>
+			<div>					
+				<Initials onClick = {() => this.falcoAppears()}>MM</Initials>
 				<NavBar>
-					<Initials>MM</Initials>
 					<StyledLink to="/"><Icon>&#xe88a;</Icon> Home</StyledLink>
 					<StyledLink to="/about"><Icon>&#xe7fd;</Icon> About</StyledLink>
 					<StyledLink to="/projects"><Icon>&#xe1b1;</Icon> Projects</StyledLink>
@@ -129,7 +150,6 @@ export default class Header extends React.Component {
 					<StyledLink to="/extras"><Icon>&#xE7F2;</Icon> Extras</StyledLink>
 				</NavBar>
 				<MobileNav>
-					<Initials>MM</Initials>
 					<Burger>
 						<Menu right styles = {hide}>
 							<StyledLink to="/">
