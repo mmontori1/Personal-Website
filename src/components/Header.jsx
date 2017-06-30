@@ -142,15 +142,18 @@ export default class Header extends React.Component {
 		if(!this.state.falco){
 			this.setState({falco: true});
 			document.getElementById('falco').style.display = "block";
-			setTimeout(this.falcoDisappears, 1000);
+			setTimeout(this.falcoDisappears, 2000);
 		}
 	}
 
 	falcoDisappears(){
 		this.setState({falco: false});
-		document.getElementById('falco').style.display = "none";
+		document.getElementById('falco').style = {
+			display: "-ms-flex",
+			display: "-webkit-flex",
+			display: "flex"
+		};
 	}
-
 	render(){
 		return (
 			<div>					

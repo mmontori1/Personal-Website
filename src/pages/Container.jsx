@@ -6,8 +6,6 @@ import { Header, Footer } from '../components';
 import { toggleTheme } from '../actions';
 import { defaultTheme } from '../styles';
 
-const falco = require('../../static/falco.gif');
-
 const Styles = styled.div`
 	position: fixed; 
 	top: 0; 
@@ -15,19 +13,6 @@ const Styles = styled.div`
 	height: 100%; 
 	width: 100%;
 	background: ${props => props.theme.secondary};
-`;
-
-const Falco = styled.div`
-	display: none;
-	margin: auto;
-`;
-
-const StyledGif = styled.img`
-	height: 5em;
-	width: 5em;
-`;
-
-const TextBox = styled.div`
 `;
 
 class Container extends React.Component {
@@ -42,10 +27,6 @@ class Container extends React.Component {
 				<Styles>
 					<Header/>
 					{React.Children.toArray(children)}
-					<Falco id="falco"> 
-						<StyledGif src = {falco}/>
-						<TextBox> what are you doing? </TextBox>
-					</Falco>
 					<Footer/>
 				</Styles>
 			</ThemeProvider>
