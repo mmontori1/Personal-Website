@@ -131,11 +131,24 @@ const Icon = styled.i`
 export default class Header extends React.Component {
 	constructor(){
 		super();
+		this.state = {
+			falco: false
+		}
 		this.falcoAppears = this.falcoAppears.bind(this);
+		this.falcoDisappears = this.falcoDisappears.bind(this);
 	}
 
 	falcoAppears(){
-		console.log("FALCO")
+		if(!this.state.falco){
+			this.setState({falco: true});
+			document.getElementById('falco').style.display = "block";
+			setTimeout(this.falcoDisappears, 1000);
+		}
+	}
+
+	falcoDisappears(){
+		this.setState({falco: false});
+		document.getElementById('falco').style.display = "none";
 	}
 
 	render(){
