@@ -36,11 +36,16 @@ const shpeLogo = require('../../static/logos/shpe_logo.png');
 
 const FlexBox = styled.div`
 	display: block;
+	width: ${props => props.extend ? "65vw" : "auto"};
 	${devices.tablet`
 		display: -ms-flex;
 		display: -webkit-flex;
 		display: flex;
 	`}
+`;
+
+const PaddedContent = styled.div`
+	padding: 10px;
 `;
 
 class About extends React.Component {
@@ -61,14 +66,18 @@ class About extends React.Component {
 							early childhood. I also went to high school at Phillips Exeter Academy in Exeter, New Hampshire.
 							I’m passionate about programming primarily focused on game dev, web dev, and mobile dev, but 
 							I’m always looking to learn more outside those fields as well!
-							<p> You can contact me and see my work at the bottom! </p>
+							<p> You can contact me and see my work through the links at the footer! </p>
 						</div>
 					</ContentBox>
 					<ContentBox title = "What do I do?">
 						<div>
-							<p> I love being an active member of the hacking community at the University of Michigan. </p> 
+							<PaddedContent> 
+								I love being an active member of the hacking community at the University of Michigan. 
+							</PaddedContent> 
 							<div>
-								<p> I’m involved in various engineering clubs on campus: </p>
+								<PaddedContent> 
+									I’m involved in various engineering clubs on campus: 
+								</PaddedContent>
 								<FlexBox>
 									<ClubBox title = "Michigan Hackers" image = {hackersLogo}>
 										<div>-&nbsp;2017-2018 Vice President </div>
@@ -85,14 +94,49 @@ class About extends React.Component {
 								</FlexBox>
 							</div>
 							<div>
-								<p> I also enjoy attending hackathons with my friends and other hackers from Michigan Hackers: </p>
-								<ul>
+								<PaddedContent> 
+									I also enjoy attending hackathons with my friends and other hackers from Michigan Hackers: 
+								</PaddedContent>
+								<PaddedContent>
 									<li>SpartaHack @ MSU, Jan. 20-22 2017 </li>
 									<li>HackIllinois @ UIUC, Feb. 24th-26th 2017 </li>
 									<li>MHacks Nano (Online Summer Hackathon), June 19th-24th 2017 </li>
-								</ul>
+								</PaddedContent>
+							</div>
+							<div>
+								<PaddedContent> 
+									Outside of programming, I enjoy playing competitive, multiplayer games 
+									such as Super Smash Bros. Melee and League of Legends as well as single player 
+									adventure or platformers like The Legend of Zelda: Breath of the Wild, Super Mario 64,
+									and Mega Man 3. I take a lot of insipiration from these games when I try to make my 
+									own games.
+								</PaddedContent>
 							</div>
 						</div>
+					</ContentBox>
+					<ContentBox title = "Skills">
+						<div>
+							<PaddedContent> 
+								Here's a list of programming languages that I use as well as my other technical skills 
+							</PaddedContent> 
+							<FlexBox extend>
+								<ClubBox title = "Proficient">
+									<div>-&nbsp;C++ </div>
+									<div>-&nbsp;HTML + CSS </div>
+									<div>-&nbsp;Python </div> 
+								</ClubBox>
+								<ClubBox title = "Experienced">
+									<div>-&nbsp;Unity + C# </div>
+									<div>-&nbsp;React </div>
+									<div>-&nbsp;Javascript </div>
+								</ClubBox>
+								<ClubBox title = "Beginner">
+									<div>-&nbsp;Swift </div>
+									<div>-&nbsp;Redux </div>
+									<div>-&nbsp;Jinja </div> 
+								</ClubBox>
+							</FlexBox>
+						</div> 
 					</ContentBox>
 				</Section>
 			</PageContainer>

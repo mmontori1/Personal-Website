@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const ClubWrapper = styled.div`
 	padding: 10px;
 	font-size: 18px;
+	flex: 1;
 `;
 
 const ClubTitle = styled.div`
@@ -32,7 +33,7 @@ export default class ContentBox extends React.Component {
 		return (
 			<ClubWrapper>
 				<ClubTitle>
-					<Logo src = {this.props.image}/> 
+					{this.props.image ? <Logo src = {this.props.image}/> : undefined}
 					{this.props.title}
 				</ClubTitle>
 				{this.props.children}
