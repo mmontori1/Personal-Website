@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 	position: relative;
 	padding-top: 60px;
 	width: 100%;
-	animation: 2s ${fader} normal 1 ease;
+	animation: 1.5s ${fader} normal 1 ease;
 `;
 
 const Falco = styled.div`
@@ -38,11 +38,11 @@ const Falco = styled.div`
 `;
 
 const Title = styled.p`
+	display: block;
 	position: absolute;
 	margin: 0;
 	margin-left: 5.2em;
 	color: yellow;
-	display: block;
 `;
 
 const StyledGif = styled.img`
@@ -52,12 +52,19 @@ const StyledGif = styled.img`
 `;
 
 const TextBox = styled.p`
+	display: inline-block;
 	position: absolute;
 	margin: 0;
-	margin-left: 5.2em;
-	left: 0;
-	bottom: 10%;
-	display: inline;
+	margin-left: 6.2rem;
+	padding: 10px;
+	bottom: 0;
+	padding-bottom: 0;
+	font-size: 16px;
+	${devices.tablet`
+		bottom: 5%;
+		padding-bottom: 0;
+		font-size: 20px;
+	`}
 `;
 
 export default class PageContainer extends React.Component {

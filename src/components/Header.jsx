@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { stack as Menu } from 'react-burger-menu'
 import { devices } from '../styles';
+import { bounceInDown } from 'react-animations';
+
+const animate = keyframes`${bounceInDown}`;
+
+const Wrapper = styled.div`
+	animation: 1s ${animate} ;
+`;
 
 const NavBar = styled.ul`
 	display: none;
@@ -141,22 +148,19 @@ export default class Header extends React.Component {
 	falcoAppears(){
 		if(!this.state.falco){
 			this.setState({falco: true});
-			document.getElementById('falco').style.display = "block";
+			document.getElementById('falco').style.cssText = "display: -ms-flex; display: -webkit-flex; display: flex;"
 			setTimeout(this.falcoDisappears, 2000);
 		}
 	}
 
 	falcoDisappears(){
 		this.setState({falco: false});
-		document.getElementById('falco').style = {
-			display: "-ms-flex",
-			display: "-webkit-flex",
-			display: "flex"
-		};
+		document.getElementById('falco').style.display = "none";
 	}
+
 	render(){
 		return (
-			<div>					
+			<Wrapper>					
 				<Initials onClick = {() => this.falcoAppears()}>MM</Initials>
 				<NavBar>
 					<StyledLink to="/"><Icon>&#xe88a;</Icon> Home</StyledLink>
@@ -201,7 +205,7 @@ export default class Header extends React.Component {
 						</Menu>
 					</Burger>
 				</MobileNav>
-			</div>
+			</Wrapper>
 		)
 	}
 }

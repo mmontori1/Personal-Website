@@ -6,8 +6,9 @@ import mailLogo from '../../static/logos/mail_icon.svg'
 import githubLogo from '../../static/logos/github_icon.svg';
 import linkedInLogo from '../../static/logos/linkedIn_icon.svg';
 import devpostLogo from '../../static/logos/devpost_icon.svg';
-import { tada } from 'react-animations';
+import { tada, bounceInUp } from 'react-animations';
 
+const animate = keyframes`${bounceInUp}`;
 const pop = keyframes`${tada}`;
 
 const Wrapper = styled.div`
@@ -17,6 +18,7 @@ const Wrapper = styled.div`
 	bottom: 0;
 	background-color: ${props => props.theme.secondary};
 	text-align: center;
+	animation: 1s ${animate} normal 1 ease;
 `;
 
 const LinkWrapper  = styled.div`
