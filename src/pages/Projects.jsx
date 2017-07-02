@@ -4,17 +4,6 @@ import styled from 'styled-components';
 import { toggleMenu } from '../actions';
 import { PageContainer, Section, WIP } from '../components';
 
-/*
-Content to add:
-  -Paragraph talking about 
-  -Link to my github to display other work
-  -TBD, with more projects
-	-Project components which have:
-	  -Name/Title
-	  -Picture
-	  -Little desc. about the project
-*/
-
 class Projects extends React.Component {
   componentDidMount() {
 	if(this.props.menu){

@@ -1,7 +1,5 @@
 var webpack = require('webpack');
 var path = require('path');
-// maybe use later?
-// var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	context: path.join(__dirname, "src"),
@@ -13,10 +11,7 @@ module.exports = {
 	},
 	resolve: {
 		modules: ['node_modules', 'src'],
-        extensions: ['.js'],
-        // root: path.resolve(__dirname),
-		// alias: {
-		// },
+        extensions: ['.js']
 	},
 	module: {
 		loaders: [
@@ -37,15 +32,13 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.NoEmitOnErrorsPlugin(),
-		// new HtmlWebpackPlugin()
-		/* APPLY WHEN IN PRODUCTION
 		new webpack.DefinePlugin({
 		  "process.env": { 
 		     NODE_ENV: JSON.stringify("production") 
 		   }
 		}),
 		new webpack.optimize.UglifyJsPlugin()
-		*/
+		
 	],
 	devServer: {
 	    historyApiFallback: true,

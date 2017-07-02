@@ -5,31 +5,6 @@ import { toggleMenu } from '../actions';
 import { ClubBox, ContentBox, PageContainer, Section } from '../components';
 import { devices } from '../styles';
 
-/*
-Content to add:
-	-About Me Paragraph
-		-UMich Student
-			-Year/Grade
-			-Major
-			-Other Info?
-		-Clubs
-			-Hackers VP
-			-MHacks Hardware Lead
-		-Hackathons
-			-Which I've attended
-		-What I like to hack
-			-Unity
-			-Web Dev
-			-Experience with C++ other stuff
-		-Games
-	-Contact Info
-		-Email
-		-Facebook
-		-Github
-		-LinkedIn
-		-Devpost
-*/
-
 const hackersLogo = require('../../static/logos/hackers_logo.jpg');
 const mhacksLogo = require('../../static/logos/mhacks_logo.jpg');
 const shpeLogo = require('../../static/logos/shpe_logo.png');
@@ -123,12 +98,12 @@ class About extends React.Component {
 								<ClubBox title = "Proficient">
 									<div>-&nbsp;C++ </div>
 									<div>-&nbsp;HTML + CSS </div>
-									<div>-&nbsp;Python </div> 
 								</ClubBox>
 								<ClubBox title = "Experienced">
 									<div>-&nbsp;Unity + C# </div>
 									<div>-&nbsp;React </div>
 									<div>-&nbsp;Javascript </div>
+									<div>-&nbsp;Python </div> 
 								</ClubBox>
 								<ClubBox title = "Beginner">
 									<div>-&nbsp;Swift </div>

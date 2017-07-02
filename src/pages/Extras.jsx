@@ -100,20 +100,6 @@ class Extras extends React.Component {
 	}
 }
 
-/*
-<ContentBox title = "Melee themed menu">
-	<ButtonWrapper>
-		<StyledLink to="/extras/melee"> Melee Homepage </StyledLink>
-	</ButtonWrapper>
-	<DescriptionWrapper>
-		<Description>
-			This home page is inspired after the home screen menu from Super Smash Bros. Melee.
-			I was going to use this as my home page for this site, but I decided to scrap it later on.
-		</Description>
-	</DescriptionWrapper>
-</ContentBox>
-*/
-
 function mapStateToProps(state) {
 	var { menu } = state.menu;
 	var { theme } = state.theme;
