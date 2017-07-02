@@ -68,10 +68,10 @@ const Initials = styled.div`
 	box-shadow: inset 0 -2px 0 ${props => props.theme.primary},
 				inset -2px 0 0 ${props => props.theme.primary};
 	background: ${props => props.theme.secondary};
-	&:hover{
-		color: ${props => props.theme.secondary};
-		background: ${props => props.theme.primary};
-	}
+	// &:hover{
+	// 	color: ${props => props.theme.secondary};
+	// 	background: ${props => props.theme.primary};
+	// }
 `;
 
 var hide = {
@@ -161,11 +161,10 @@ export default class Header extends React.Component {
 	render(){
 		return (
 			<Wrapper>					
-				<Initials onClick = {() => this.falcoAppears()}>MM</Initials>
+				<Initials>MM</Initials>
 				<NavBar>
 					<StyledLink to="/"><Icon>&#xe88a;</Icon> Home</StyledLink>
 					<StyledLink to="/about"><Icon>&#xe7fd;</Icon> About</StyledLink>
-					<StyledLink to="/projects"><Icon>&#xe1b1;</Icon> Projects</StyledLink>
 					<StyledLink to="/resume"><Icon>&#xe873;</Icon> Resume</StyledLink>
 					<StyledLink to="/extras"><Icon>&#xE7F2;</Icon> Extras</StyledLink>
 				</NavBar>
@@ -183,12 +182,6 @@ export default class Header extends React.Component {
 									<Icon>&#xe7fd;</Icon>
 								</IconWrapper>
 								About
-							</StyledLink>
-							<StyledLink to="/projects">
-								<IconWrapper>
-									<Icon>&#xe1b1;</Icon>
-								</IconWrapper>
-								Projects
 							</StyledLink>
 							<StyledLink to="/resume">
 								<IconWrapper>

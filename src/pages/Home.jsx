@@ -72,7 +72,6 @@ class Home extends React.Component {
 				<NameTitle> 
 					Mariano Montori 
 					<Dots/>
-					<Subtitle> web developer </Subtitle>
 				</NameTitle>
 			</PageContainer>
 		)
