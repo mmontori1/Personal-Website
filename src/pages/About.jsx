@@ -123,12 +123,12 @@ class About extends React.Component {
 								<ClubBox title = "Proficient">
 									<div>-&nbsp;C++ </div>
 									<div>-&nbsp;HTML + CSS </div>
-									<div>-&nbsp;Python </div> 
 								</ClubBox>
 								<ClubBox title = "Experienced">
 									<div>-&nbsp;Unity + C# </div>
 									<div>-&nbsp;React </div>
 									<div>-&nbsp;Javascript </div>
+									<div>-&nbsp;Python </div> 
 								</ClubBox>
 								<ClubBox title = "Beginner">
 									<div>-&nbsp;Swift </div>
