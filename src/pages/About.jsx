@@ -64,7 +64,7 @@ class About extends React.Component {
 							Hey! I'm Mariano Montori, a junior at the University of Michigan majoring in Computer Science. 
 							I come from all parts of Southern Florida, but I am originally from Peru where I spent my 
 							early childhood. I also went to high school at Phillips Exeter Academy in Exeter, New Hampshire.
-							I’m passionate about programming primarily focused on game dev, web dev, and mobile dev, but 
+							I’m passionate about programming, primarily focused on game dev, web dev, and mobile dev, but 
 							I’m always looking to learn more outside those fields as well!
 							<p> You can contact me and see my work through the links at the footer! </p>
 						</div>

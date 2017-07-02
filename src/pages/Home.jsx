@@ -56,6 +56,14 @@ const Dots = styled.div`
 	`}
 `;
 
+/*
+	subtitles:
+	-web developer
+	-hackathon enthusiast
+	-game designer
+	-college student
+*/
+
 class Home extends React.Component {
 	componentDidMount() {
 		if(this.props.menu){
