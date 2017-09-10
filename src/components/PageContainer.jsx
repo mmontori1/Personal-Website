@@ -71,11 +71,13 @@ export default class PageContainer extends React.Component {
 	render(){
 		return (
 			<Wrapper>
+				{/*
 				<Falco id="falco">
 					<Title> FALCO </Title>
 					<TextBox> Melee Falco best character </TextBox>
 					<StyledGif src = {falco}/>
 				</Falco>
+				*/}
 				{this.props.children}
 			</Wrapper>
 		)

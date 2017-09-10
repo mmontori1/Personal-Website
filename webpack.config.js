@@ -6,6 +6,7 @@ module.exports = {
 	devtool: 'inline-source-map',
 	entry: './app.jsx',
 	output: {
+		//comment out path when moving the bundle.js over for github pages
 		path: path.join(__dirname, 'public'),
 		filename: 'bundle.js'
 	},
