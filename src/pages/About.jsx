@@ -97,18 +97,19 @@ class About extends React.Component {
 							<FlexBox extend>
 								<ClubBox title = "Proficient">
 									<div>-&nbsp;C++ </div>
+									<div>-&nbsp;Swift </div>
+									<div>-&nbsp;React </div>
+									<div>-&nbsp;Javascript </div>
 									<div>-&nbsp;HTML + CSS </div>
 								</ClubBox>
 								<ClubBox title = "Experienced">
 									<div>-&nbsp;Unity + C# </div>
-									<div>-&nbsp;React </div>
-									<div>-&nbsp;Javascript </div>
 									<div>-&nbsp;Python </div> 
 								</ClubBox>
 								<ClubBox title = "Beginner">
-									<div>-&nbsp;Swift </div>
 									<div>-&nbsp;Redux </div>
 									<div>-&nbsp;Jinja </div> 
+									<div>-&nbsp;SQL </div>
 								</ClubBox>
 							</FlexBox>
 						</div> 
