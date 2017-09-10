@@ -71,7 +71,9 @@ class Home extends React.Component {
 				</PicWrapper>
 				<NameTitle> 
 					Mariano Montori 
+					{/*
 					<Dots/>
+					*/}
 				</NameTitle>
 			</PageContainer>
 		)
